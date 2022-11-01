@@ -3,6 +3,7 @@
     width: 100vw;
     margin: 2px;
     border: 3px;
+    background-color: black;
 }
 .navBar > .navList {
     list-style-type: none;
