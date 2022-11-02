@@ -6,6 +6,7 @@
     <title>MyKia</title>
 
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="chair.css">
 
 </head>
 <body>
@@ -26,25 +27,109 @@
         </ul>
     </div>
 
+    <!--mainContainer division contains everything 
+        except the footer division at the bottom-->
     <div class="mainContainer">
 
-        <div class="bodyContainer">
-            <p>Chair Placeholder text 1</p>
+        <!--three buttons at the top: create reset or save-->
+        <a href="#" >
+        <button type="button" class="createChair">Create New Design!</button>
+        </a>
+        <a href="#">
+            <button type="button" class="resetChair">Reset Design</button>
+        </a>
+        <a href="#" >
+            <button type="button" class="saveChair">Save Design</button>
+        </a>
+
+        <br>
+        <br>
+        <br>
+
+        <!--dropdown menu for the user's previously saved designs-->
+        <select name="savedChair" class="savedMenu">
+            <option>First_save</option>
+            <option>Second_save</option>
+        </select>
+
+        <!--box where the changing image of the chair should be,
+            for now just a placeholder-->
+        <div class="chairDesigning">
+            <p>This should be the chair design box</p>
         </div>
 
-        <div class="bodyContainer">
-            <p>Chair Placeholder text 2</p>
+        <br>
+        <br>
+        
+        <hr>
+     
+        <br>
+        <br>
+
+        <!--option menu to change the design,
+            note: option values were chosen arbitrarily and are 
+            subject to change -->
+        <div class="chairDesignOptions">
+           <form method="" action="">
+            <!--title of form-->
+            <legend>Design Options</legend>
+
+            <!--options to change the upholstery of the chair-->
+            <p>
+                <label>Change Upholstery<br></label>
+                <select>
+                    <option>Plastic</option>
+                    <option>Fabric</option>
+                    <option>Leather</option>
+                </select>
+            </p>
+
+            <!--options to change the upholstery color-->
+            <p>
+                <label>Color<br></label>
+                <input type="radio" name="colorUpholstery" value="white">White 
+                <input type="radio" name="colorUpholstery" value="grey">Grey   
+                <input type="radio" name="colorUpholstery" value="black">Black    
+            </p>
+
+            <!--options to change the legs of the chair-->
+            <p>
+                <label>Change Legs<br></label>
+                <select>
+                    <option>Classic Metal</option>
+                    <option>Clawfoot</option>
+                    <option>Wheels</option>
+                </select>
+            </p>
+
+            <!--options to change the leg color-->
+            <p>
+                <label>Color<br></label>
+                <input type="radio" name="colorLegs" value="white">White   
+                <input type="radio" name="colorLegs" value="grey">Grey   
+                <input type="radio" name="colorLegs" value="black">Black    
+            </p>
+
+            </form>
         </div>
 
-        <div class="bodyContainer">
-            <p>Chair Placeholder text 3</p>
-        </div>
 
+        <!--deleted third div because it wasn't necesary -->
+       
     </div>
 
+    <br>
+    <br>
+
+    <hr>
+
+
+    <!--pretend contact info for aesthetic purposes-->
     <div class="footerBar">
-        <p>FOOTER TEST TEXT</p>
+        <p>Contact us for help: <br>fake.email@gmail.com</p>
     </div>
+
+    <hr>
 
 </body>
 </html>

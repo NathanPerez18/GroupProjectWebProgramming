@@ -1,0 +1,98 @@
+/* page fonts and background */
+
+body{
+    background-color:rgb(202, 255, 222, 0.8);
+    font-family: Century Gothic, Lucida Sans, sans-serif;
+
+}
+
+/* change font for buttons specifically */
+a button{
+    font-family: Lucida Sans, sans-serif;
+}
+
+/*following three blocks are the three oval shaped buttons at the top 
+of the page*/
+.createChair{
+    background-color: rgb(0, 234, 255);
+    border-color:rgb(150, 255, 255);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.resetChair{
+    background-color: rgb(255, 162, 23);
+    border-color: rgb(255, 207, 77);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.saveChair{
+    background-color: rgb(57, 255, 50);
+    border-color: rgb(140, 253, 102);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+/*block where the changing image of the chair should be*/
+.chairDesigning{
+    border-style: solid;
+    width: 51%;
+    height: 400px;
+    border-color: black;
+    border-radius: 4px;
+    margin-left:25%;
+    background-color: white;
+}
+
+/*(main) division container where the changing image of the chair is*/
+.mainContainer {
+    height: 80%;
+    width: 100%;
+    margin: 2px;
+    border: 3px;
+    font-family: Lucida Sans, sans-serif;
+}
+
+/*division for the design options*/
+div.chairDesignOptions {
+    border-style: ridge none ridge none;
+    border-width: 10pt;
+    width: 60%;
+    border-color: rgb(110, 254, 208);
+    padding: 10pt;
+    text-align: center;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
+    margin-left: 20%;
+    font-family: Century Gothic, Lucida Sans, sans-serif;
+}
+
+/*the title "Design Options" within the form */
+div.chairDesignOptions legend{
+    font-size: 30pt;
+}
+
+/*the other titles in the form (color, change chair legs, etc.)*/
+div.chairDesignOptions label{
+    font-size: 15pt;
+    text-decoration: underline;
+}
+
+/*the dropdown near the top of the page with the user's previous designs*/
+.savedMenu{
+    background-color: rgb(110, 254, 208);
+    border-color:rgb(74, 120, 96);
+    padding: 10px;
+    border-radius: 2pt;
+    width: 300px;
+}
+
+/*the division block for the footer at the bottom of the page*/
+.footerBar {
+    height: 10vh;
+    width: 100%;
+    border: 5px;
+    margin-left: 40px;
+    margin-top: 30px;   
+}
