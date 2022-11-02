@@ -30,8 +30,23 @@
     border: 3px;
 }
 
-.bodyContainer {
-    border: 3px;
+/*These are the properties for the webpage buttons*/
+div.bodyContainer {
+    border-style: solid;
+    width: 8em;
+    border-color: black;
+    border-radius: 1em;
+}
+
+a.button{
+  width: 50%;
+  padding: 12px;
+}
+
+a button{
+    background-color: blue;
+    border-color: blue;
+    border-radius: 1em;
 }
 
 .footerBar {
