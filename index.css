@@ -1,43 +1,4 @@
-﻿/*NavBar Style Rules Section START*/
-.navBar {
-    height: 10vh;
-    width: 100%;
-}
-.navList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-
-    position: sticky;
-    top: 0;
-    width: 100%;
-}
-.navItems {
-    float: left;
-}
-
-.navItems a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
-    font-size: 24px;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-.navItems a:hover {
-    background-color: gray;
-}
-
-#loginBut{
-    float: right;
-}
-/*NavBar Style Section END*/
-
-
+﻿
 .mainContainer {
     height: 80vh;
     margin: auto;
@@ -73,9 +34,3 @@ a button{
     border-radius: 1em;
 }
 /*Webpage Buttons Style Section END*/
-
-.footerBar {
-    height: 10vh;
-    width: 100%;
-    border: 5px;
-}
