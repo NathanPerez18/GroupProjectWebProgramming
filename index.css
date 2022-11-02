@@ -40,22 +40,31 @@
 
 .mainContainer {
     height: 80vh;
-    width: 100%;
-    margin: 2px;
+    margin: auto;
+    width: 25%;
     border: 3px;
+    padding: 40px;
+    /* margin-left: 22.69vw; */
 }
 
-/*These are the properties for the webpage buttons*/
+/*Webpage Buttons Style Rules Section START*/
+
 div.bodyContainer {
     border-style: solid;
     width: 8em;
     border-color: black;
     border-radius: 1em;
+    float: left;
+    margin-left: 1em;    
+    margin-top: 1em;
+}
+
+div.bodyContainer h3{
+    font-size: 1.25em;
 }
 
 a.button{
-  width: 50%;
-  padding: 12px;
+  padding: 10%;
 }
 
 a button{
@@ -63,6 +72,7 @@ a button{
     border-color: blue;
     border-radius: 1em;
 }
+/*Webpage Buttons Style Section END*/
 
 .footerBar {
     height: 10vh;
