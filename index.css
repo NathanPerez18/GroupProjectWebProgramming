@@ -1,36 +1,33 @@
-﻿
 .mainContainer {
     height: 80vh;
-    margin: auto;
-    width: 25%;
-    border: 3px;
-    padding: 40px;
-    /* margin-left: 22.69vw; */
+    padding-top: 30px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*Webpage Buttons Style Rules Section START*/
 
-div.bodyContainer {
+.bodyContainer {
     border-style: solid;
-    width: 8em;
     border-color: black;
     border-radius: 1em;
+    text-align: center;
     float: left;
     margin-left: 1em;    
     margin-top: 1em;
 }
 
-div.bodyContainer h3{
+.bodyContainer h3{
     font-size: 1.25em;
-}
-
-a.button{
-  padding: 10%;
+    text-align: left;
+    white-space: nowrap;
 }
 
 a button{
     background-color: blue;
     border-color: blue;
     border-radius: 1em;
+    white-space: nowrap;
 }
 /*Webpage Buttons Style Section END*/
