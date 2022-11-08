@@ -79,6 +79,43 @@ div.chairDesignOptions label{
     text-decoration: underline;
 }
 
+span.colorWhite{
+    background-color: white;
+    border: 1px solid black;
+    color: white;
+    padding: 10px 10px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+span.colorGrey{
+    background-color: grey;
+    border: 1px solid black;
+    color: grey;
+    padding: 10px 10px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+span.colorBlack{
+    background-color: black;
+    border: 1px solid black;
+    color: black;
+    padding: 10px 10px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
 /*the dropdown near the top of the page with the user's previous designs*/
 .savedMenu{
     background-color: rgb(94, 236, 170);

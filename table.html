@@ -69,7 +69,7 @@
         <!--option menu to change the design,
             note: option values were chosen arbitrarily and are 
             subject to change -->
-        <div class="tableDesignOptions">
+        <div class="tableDesignOptions" class="radio-toolbar">
             <form method="" action="">
             <!--title of form-->
             <legend>Design Options</legend>
@@ -79,17 +79,17 @@
                 <label>Change Table Top<br></label>
                 <select>
                     <option>Square</option>
-                    <option>Round</option>
-                    <option>Spiky</option>
+                    <option>Circle</option>
+                    <option>Slatted</option>
                 </select>
             </p>
      
             <!--options to change the table top color-->
             <p>
                 <label>Color<br></label>
-                <input type="radio" name="colorTableTop" value="white">White 
-                <input type="radio" name="colorTableTop" value="grey">Grey   
-                <input type="radio" name="colorTableTop" value="black">Black    
+                <input type="radio" name="colorTableTop" value="white"><span class="colorWhite">color</span>
+                <input type="radio" name="colorTableTop" value="grey"><span class="colorGrey">color</span> 
+                <input type="radio" name="colorTableTop" value="black"><span class="colorBlack">color</span> 
             </p>
      
             <!--options to change the legs of the table-->
@@ -105,9 +105,9 @@
             <!--options to change the leg color-->
             <p>
                 <label>Color<br></label>
-                <input type="radio" name="colorLegs" value="white">White   
-                <input type="radio" name="colorLegs" value="grey">Grey   
-                <input type="radio" name="colorLegs" value="black">Black    
+                <input type="radio" name="colorLegs" value="white"><span class="colorWhite">color</span>
+                <input type="radio" name="colorLegs" value="grey"><span class="colorGrey">color</span>
+                <input type="radio" name="colorLegs" value="black"><span class="colorBlack">color</span>
             </p>
      
             </form>
