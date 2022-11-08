@@ -1,12 +1,10 @@
 .mainContainer {
-    height: 80vh;
+    height: 100vh;
     padding-top: 30px;
     width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
-
-/*Webpage Buttons Style Rules Section START*/
 
 .bodyContainer {
     border-style: solid;
@@ -32,4 +30,3 @@ a button{
     white-space: nowrap;
     margin-bottom: 5px;
 }
-/*Webpage Buttons Style Section END*/
