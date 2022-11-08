@@ -1,9 +1,41 @@
+body{
+    background-color: rgb(255, 255, 208);
+    font-family: Century Gothic, Lucida Sans, sans-serif;
+}
 .mainContainer{
-    height: 80vh;
+    height: auto;
 }
 
+img{
+    width: 200pt;
+    height: 150pt;
+}
+
+.image{
+    float:left;
+}
+
+.text{
+}
 .bodyContainer{
-    float: left;
-    padding-left: 30px;
-    padding-right: 30px;
+    background-color:rgb(255, 255, 235);
+    width: 900pt;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+    margin-left: 50pt;
+    margin-right: auto;
+    margin-top: 10pt;
+    margin-bottom: 30pt;
+    border: 3pt inset rgb(254, 242, 201);
+}
+
+/*the division block for the footer at the bottom of the page*/
+.footerBar {
+    height: 10vh;
+    width: 100%;
+    border: 5px;
+    margin-left: 40px;
+    margin-top: 30px;   
 }
