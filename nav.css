@@ -1,4 +1,10 @@
-﻿/*NavBar Style Rules Section START*/
+﻿/*Header Style Rules Section START*/
+.header {
+    background-color: lightgray;
+}
+/*Header Style Section END*/
+
+/*NavBar Style Rules Section START*/
 .navBar {
     height: 10vh;
     width: 100%;
@@ -44,5 +50,7 @@
     height: 10vh;
     width: 100%;
     border: 5px;
+    background-color: lightgray;
+    bottom: 0;
 }
 /*FooterBar Style Section END*/

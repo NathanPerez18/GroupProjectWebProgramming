@@ -1,4 +1,11 @@
-﻿input[type=text], input[type=password] {
+﻿.mainContainer {
+    height: 100%;
+    width: auto;
+    border: 3px;
+    padding: 25px;
+}
+
+input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -31,18 +38,20 @@ button:hover {
     opacity: 0.8;
 }
 
+.imgContainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
 .bodyContainer {
     border-style: none;
     width: 100%;
     float: inherit;
     margin-left: 1em;
     margin-top: 1em;
-}
-.mainContainer {
-    height: 80vh;
-    margin: auto;
-    width: auto;
-    border: 3px;
-    padding: 25px;
-
 }

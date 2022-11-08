@@ -6,6 +6,7 @@
     <title>MyKia</title>
 
     <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="table.css">
 
 </head>
 <body>
@@ -26,25 +27,108 @@
         </ul>
     </div>
 
+    <!--mainContainer division contains everything 
+        except the footer division at the bottom-->
     <div class="mainContainer">
 
-        <div class="bodyContainer">
-            <p>Table Placeholder text 1</p>
+        <!--three buttons at the top: create reset or save-->
+        <a href="#" >
+        <button type="button" class="createTable">Create New Design!</button>
+        </a>
+        <a href="#">
+            <button type="button" class="resetTable">Reset Design</button>
+        </a>
+        <a href="#" >
+            <button type="button" class="saveTable">Save Design</button>
+        </a>
+    
+        <br>
+        <br>
+        <br>
+
+        <!--dropdown menu for the user's previously saved designs-->
+        <select name="savedTable" class="savedMenu">
+            <option>First_save</option>
+            <option>Second_save</option>
+        </select>
+
+        <!--box where the changing image of the chair should be,
+            for now just a placeholder-->
+        <div class="tableDesigning">
+            <p>This should be the table design box</p>
         </div>
 
-        <div class="bodyContainer">
-            <p>Table Placeholder text 2</p>
-        </div>
+        <br>
+        <br>
+        
+        <hr>
+     
+        <br>
+        <br>
 
-        <div class="bodyContainer">
-            <p>Table Placeholder text 3</p>
+        <!--option menu to change the design,
+            note: option values were chosen arbitrarily and are 
+            subject to change -->
+        <div class="tableDesignOptions">
+            <form method="" action="">
+            <!--title of form-->
+            <legend>Design Options</legend>
+     
+            <!--options to change the table top-->
+            <p>
+                <label>Change Table Top<br></label>
+                <select>
+                    <option>Square</option>
+                    <option>Round</option>
+                    <option>Spiky</option>
+                </select>
+            </p>
+     
+            <!--options to change the table top color-->
+            <p>
+                <label>Color<br></label>
+                <input type="radio" name="colorTableTop" value="white">White 
+                <input type="radio" name="colorTableTop" value="grey">Grey   
+                <input type="radio" name="colorTableTop" value="black">Black    
+            </p>
+     
+            <!--options to change the legs of the table-->
+            <p>
+                <label>Change Legs<br></label>
+                <select>
+                    <option>Classic Metal</option>
+                    <option>Clawfoot</option>
+                    <option>Wheels</option>
+                </select>
+            </p>
+     
+            <!--options to change the leg color-->
+            <p>
+                <label>Color<br></label>
+                <input type="radio" name="colorLegs" value="white">White   
+                <input type="radio" name="colorLegs" value="grey">Grey   
+                <input type="radio" name="colorLegs" value="black">Black    
+            </p>
+     
+            </form>
         </div>
+     
+
+        <!--deleted third div because it wasn't necesary -->
 
     </div>
 
+    <br>
+    <br>
+
+    <hr>
+
+    <!--pretend contact info for aesthetic purposes-->
     <div class="footerBar">
-        <p>FOOTER TEST TEXT</p>
+        <p>Contact us for help: <br>fake.email@gmail.com</p>
     </div>
+
+    <hr>
 
 </body>
 </html>
