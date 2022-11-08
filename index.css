@@ -1,5 +1,5 @@
 .mainContainer {
-    height: 100vh;
+    height: 50em;
     padding-top: 30px;
     width: 600px;
     margin-left: auto;
@@ -21,6 +21,10 @@
     text-align: left;
     white-space: nowrap;
     padding-left: 5px;
+}
+
+.bodyContainer p{
+    text-align: left;
 }
 
 a button{
