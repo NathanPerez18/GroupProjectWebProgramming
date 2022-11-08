@@ -12,10 +12,13 @@ img{
 }
 
 .image{
-    float:left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .text{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .bodyContainer{
     background-color:rgb(255, 255, 235);
@@ -23,7 +26,7 @@ img{
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     margin-left: 50pt;
     margin-right: auto;
     margin-top: 10pt;
