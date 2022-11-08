@@ -1,0 +1,9 @@
+.mainContainer{
+    height: 80vh;
+}
+
+.bodyContainer{
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+}
