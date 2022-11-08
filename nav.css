@@ -1,4 +1,8 @@
-﻿/*Header Style Rules Section START*/
+﻿* {
+    margin:0;
+}
+
+/*Header Style Rules Section START*/
 .header {
     background-color: lightgray;
 }
