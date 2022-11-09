@@ -5,7 +5,12 @@
 /*Header Style Rules Section START*/
 .header {
     background-color: lightgray;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 /*Header Style Section END*/
 
 /*NavBar Style Rules Section START*/
