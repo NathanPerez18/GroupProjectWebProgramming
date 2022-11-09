@@ -4,30 +4,49 @@ body{
 }
 .mainContainer{
     height: auto;
+    width: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 35pt;
+    color:rgb(22, 20, 18);
+    margin-bottom: 40pt;
+    margin-top: 30pt;
+    text-decoration: underline;
+
 }
 
 img{
-    width: 200pt;
-    height: 150pt;
+    width: 300pt;
+    height: 200pt;
 }
 
 .image{
-    margin-left: 10px;
+    border: 2px inset rgb(22, 20, 18);
+    width: 300pt;
+    height: 200pt;
+    float: left;
     margin-right: 10px;
 }
 
 .text{
     margin-left: 10px;
     margin-right: 10px;
+    width: 500pt;
+    overflow: hidden;
+    line-height: 25pt;
+    color:rgb(22, 20, 18);
 }
 .bodyContainer{
     background-color:rgb(255, 255, 235);
     width: 900pt;
+    height: 200pt;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    padding-bottom: 150px;
-    margin-left: 50pt;
+    padding-bottom: 50px;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 10pt;
     margin-bottom: 30pt;
