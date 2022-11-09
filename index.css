@@ -1,3 +1,10 @@
+body{
+    background-color: rgb(233, 243, 247);
+    font-family: Century Gothic, Lucida Sans, sans-serif;
+    /* background-image: url("MyKiaLogoCentered.png");
+    background-size: 300px 200px;
+    background-repeat: repeat-x; */
+}
 .mainContainer {
     height: 50em;
     padding-top: 30px;
@@ -7,8 +14,10 @@
 }
 
 .bodyContainer {
+    background-color: white;
+
     border-style: solid;
-    border-color: black;
+    border-color: rgb(177, 202, 210);
     border-radius: 1em;
     text-align: center;
     float: left;
@@ -28,9 +37,65 @@
 }
 
 a button{
-    background-color: blue;
-    border-color: blue;
+    background-color: rgb(1, 1, 122);
+    color: rgb(205, 224, 230);
+    border-color: rgb(1, 1, 122);
     border-radius: 1em;
     white-space: nowrap;
     margin-bottom: 5px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20pt;
+    font-weight:bold;
+
+}
+
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    font-size: 60pt;
+    color:rgb(1, 1, 122);
+    border-bottom: 10pt dashed rgb(205, 224, 230);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 2pt solid rgb(205, 224, 230);
+    text-align: center;
+}
+p{
+    text-align:right;
+    margin-top:10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.title{
+    /* background-image: url("WebProgrammingLogo.png");
+    background-size: 400px 300px;
+    background-repeat: repeat-x; */
+    width: 100%;
+    height: 200pt;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20pt;
+    margin-bottom: 30pt;
+}
+
+.leftLogo{
+    background-image: url("centerdlogoforRivka.png");
+    background-size: 350px 305px;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:left;
+    width: 350px;
+    height: 305px;
+}
+.rightLogo{
+    background-image: url("centerdlogoforRivka.png");
+    background-size: 350px 305px;
+    background-repeat: no-repeat;
+    background-position: center;
+    float:right;
+    width: 350px;
+    height: 305px;
 }
