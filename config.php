@@ -1,13 +1,17 @@
 <?php
-// Create a database connection
-private $dbhost = "localhost";
-private $dbuser = "Admin";
-private $dbpass = "";
-private $dbname = "admin";
+class static config{
 
-private $connection = mysqli_connect ($dbhost,$dbuser,$dbpass,$dbname);
+    // Creates a database connection
+    private $dbhost = "localhost";
+    private $dbuser = "Admin";
+    private $dbpass = "";
+    private $dbname = "admin";
 
-if (mysqli_connect_errno()){
-    die("Database connection failed: ".mysqli_connect_error()."(".mysqli_connect_errno().")");
+    private $connection = mysqli_connect ($dbhost,$dbuser,$dbpass,$dbname);
+
+    if (mysqli_connect_errno()){
+        die("Database connection failed: ".mysqli_connect_error()."(".mysqli_connect_errno().")");
+    }
+
 }
 ?>
