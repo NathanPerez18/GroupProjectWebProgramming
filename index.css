@@ -6,6 +6,7 @@ body{
     background-repeat: repeat-x; */
 }
 .mainContainer {
+    text-align: center;
     height: 50em;
     padding-top: 30px;
     width: 600px;
@@ -15,7 +16,6 @@ body{
 
 .bodyContainer {
     background-color: white;
-
     border-style: solid;
     border-color: rgb(177, 202, 210);
     border-radius: 1em;
