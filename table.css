@@ -49,7 +49,6 @@ of the page*/
 .mainContainer {
     height: 80%;
     width: 100%;
-    margin: 2px;
     border: 3px;
     font-family: Lucida Sans, sans-serif;
 }
@@ -130,8 +129,4 @@ span.colorBlack{
     height: 10vh;
     width: 100%;
     border: 5px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 30px;   
-    margin-bottom: 30px;
 }
