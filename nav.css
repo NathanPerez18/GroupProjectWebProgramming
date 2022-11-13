@@ -9,6 +9,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    animation: fadeInAnimation ease-out 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
 /*Header Style Section END*/
@@ -46,7 +50,20 @@
 
 .navItems a:hover {
     background-color: gray;
+
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
  }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 #loginBut {
     float: right;
