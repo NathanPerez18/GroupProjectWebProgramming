@@ -1,27 +1,34 @@
 <?php
-class login{
-
-		protected $uname;
+class login extends config{
+		
+		private $uname;
 		private $upass;
 
-		function login(){
-			$sql = "SELECT uname FROM users WHERE uname=$uname";
+		public function login(){
+			$sql = "SELECT uname FROM users WHERE uname LIKE '$uname'";
+			$result = $connection->query($sql);
+			if(mysqli_num_rows($sql) > 0){
+				//exists
+			}else{
+				echo "User doesn't exist";
+				return 0;
+			}
+
+			$result = $connection->query($sql);
+			$row = $result->fetch_assoc();
+			if($row['upass'] == $upass){
+				$_SESSION["uid"] = $row["id"];
+			}
+
 		}
 
-		function cuser($uname, $upass){
+		public function createUser($uname, $upass){
 
 		$sql = "INSERT INTO users (uname, upass) VALUES (
 			'{$connection->real_escape_string($_POST['uname'])}',
-			'{$connectino->real_escape_string($_POST['upass'])}'";
-				$insert = $connection->query($sql);
-
-			// Print response from MySQL
-
-			if ( $insert == TRUE){
-                
-			}else {
-				die("Error: {$connection->errno} : {$connection->error}");
-			}
+			'{$connection->real_escape_string($_POST['upass'])}',
+			'{$connection->real_escape_string($_POST['email'])}'";
+			$insert = $connection->query($sql);
 		}
-}
+	}
 ?>
