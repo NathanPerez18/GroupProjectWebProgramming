@@ -57,7 +57,7 @@
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="tableDesigning">
-            <p>This should be the table design box</p>
+            <img id ="designBox" src="testTable1.jpg" />
         </div>
 
         <br>
