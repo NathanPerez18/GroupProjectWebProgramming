@@ -1,7 +1,7 @@
 // JavaScript source code
 
-function resetClick() {
-    document.getElementById("designBox").src = "testChair2.jpg";
+function resetClick(name) {
+    document.getElementById("designBox").src = name;
 }
 
 function createNewClick() {
