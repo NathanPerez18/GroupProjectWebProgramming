@@ -20,11 +20,17 @@ $rowForQueriedData: The data
 	$rowForQueriedData = $result->fetch_assoc();
 	}
 
-	$sql = "INSERT INTO users (uname, upass) VALUES (
-			'{$connection->real_escape_string($_POST['uname'])}',
-			'{$connectino->real_escape_string($_POST['upass'])}'";
-				$insert = $connection->query($sql);
-
+	//FILLMEUPDADDY PLEASE FILL ME IN ;)
+	//The post variable will be directly 
+	$sql = "INSERT INTO chair (primaryKey,nameOfSave,material,materialColor,legs,legsColor) VALUES (
+			'{$connection->real_escape_string($_SESSION['uid'])}',
+			'{$connection->real_escape_string($_POST['nameOfSave'])}',
+			'{$connection->real_escape_string($_POST['FILLMEUPDADDY'])}',
+			'{$connection->real_escape_string($_POST['FILLMEUPDADDY'])}',
+			'{$connection->real_escape_string($_POST['FILLMEUPDADDY'])}',
+			'{$connection->real_escape_string($_POST['FILLMEUPDADDY'])}',
+			";
+			$insert = $connection->query($sql);
 
 }
 ?>

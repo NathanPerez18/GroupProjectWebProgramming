@@ -19,11 +19,11 @@
 
     <div class="navBar">
         <ul class="navList">
-            <li class="navItems"><a href="index.html">Home</a></li>
-            <li class="navItems"><a href="chair.html">Chair</a></li>
-            <li class="navItems"><a href="table.html">Table</a></li>
-            <li class="navItems"><a href="contact.html">Contact</a></li>
-            <li class="navItems" id="loginBut"><a href="login.html">Login</a></li>
+            <li class="navItems"><a href="index.php">Home</a></li>
+            <li class="navItems"><a href="chair.php">Chair</a></li>
+            <li class="navItems"><a href="table.php">Table</a></li>
+            <li class="navItems"><a href="contact.php">Contact</a></li>
+            <li class="navItems" id="loginBut"><a href="login.php">Login</a></li>
         </ul>
     </div>
     <div class="title">
@@ -43,7 +43,7 @@
             <img src="https://images.vexels.com/media/users/3/192849/isolated/lists/e626a584464b1e532662560df286fa10-round-classic-side-table-silhouette-perspective.png">
             <h3></h3>
             <!--refrence is to Tables webpage-->
-            <a href="table.html" class="button">
+            <a href="table.php" class="button">
                 <button>Create a Table</button>
             </a>
         </div>
@@ -53,7 +53,7 @@
             <img src="https://images.vexels.com/media/users/3/189271/isolated/lists/d91d870be0001128a3a7513059578553-office-ergonomic-chair-silhouette.png">
             <h3></h3>
             <!--refrence is to Chairs webpage-->
-            <a href="chair.html" class="button">
+            <a href="chair.php" class="button">
                 <button>Create a Chair</button>
             </a>
         </div>

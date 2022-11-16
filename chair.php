@@ -22,11 +22,11 @@
 
     <div class="navBar">
         <ul class="navList">
-            <li class="navItems"><a href="index.html">Home</a></li>
-            <li class="navItems"><a href="chair.html">Chair</a></li>
-            <li class="navItems"><a href="table.html">Table</a></li>
-            <li class="navItems"><a href="contact.html">Contact</a></li>
-            <li class="navItems" id="loginBut"><a href="login.html">Login</a></li>
+            <li class="navItems"><a href="index.php">Home</a></li>
+            <li class="navItems"><a href="chair.php">Chair</a></li>
+            <li class="navItems"><a href="table.php">Table</a></li>
+            <li class="navItems"><a href="contact.php">Contact</a></li>
+            <li class="navItems" id="loginBut"><a href="login.php">Login</a></li>
         </ul>
     </div>
 
