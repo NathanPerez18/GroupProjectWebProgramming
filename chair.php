@@ -12,6 +12,7 @@
 <body>
 
     <script src="updateDesign.js"></script>
+    <script src="updateChairDesign.js"></script>
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
@@ -57,7 +58,12 @@
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="chairDesigning">
-            <p>This should be the chair design box</p>
+            <img id="chairM" src="testChair1.jpg" style="width:100px; height: 100px;">
+            <br>
+            <img id="chairL" src="testChair2.jpg" style = "width: 100px; height:100px;">
+
+
+            
         </div>
 
         <br>
@@ -80,18 +86,18 @@
                 <p>
                     <label>Change Material<br></label>
                     <select>
-                        <option>Plastic</option>
-                        <option>Wood</option>
-                        <option>Metal</option>
+                        <option id="plastic" value="0" onclick="materialType('plastic')">Plastic</option>
+                        <option id="wood" value="1" onclick="materialType('wood')">Wood</option>
+                        <option id="metal" value="2" onclick="materialType('metal')">Metal</option>
                     </select>
                 </p>
 
                 <!--options to change the material color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorUpholstery" value="white"><span class="colorWhite">color</span>
-                    <input type="radio" name="colorUpholstery" value="grey"><span class="colorGrey">color</span>
-                    <input type="radio" name="colorUpholstery" value="black"><span class="colorBlack">color</span>
+                    <input type="radio" name="colorUpholstery" id="mwhite" value="0" onclick="materialColor('mwhite')"><span class="colorWhite">color</span>
+                    <input type="radio" name="colorUpholstery" id="mgrey" value="1" onclick="materialColor('mgrey')"><span class="colorGrey">color</span>
+                    <input type="radio" name="colorUpholstery" id="mblack" value="2" onclick="materialColor('mblack')"><span class="colorBlack">color</span>
                 </p>
 
                 <!--options to change the legs of the chair-->
