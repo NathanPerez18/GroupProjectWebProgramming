@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿<?php
+include("dlogin.php");
+
+$account = new dlogin($_POST['uname'], $_POST['upass']);
+$accout->login();
+
+?>
+
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
