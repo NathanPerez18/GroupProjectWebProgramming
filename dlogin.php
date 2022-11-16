@@ -1,8 +1,14 @@
 <?php
-class login extends config{
+include 'config.php';
+class dlogin extends config{
 		
 		private $uname;
 		private $upass;
+		public function __construct($name,$pass){
+			$uname=$name;
+			$upass=$pass;
+		}
+
 
 		public function login(){
 			$sql = "SELECT uname FROM users WHERE uname LIKE '$uname'";
@@ -19,16 +25,17 @@ class login extends config{
 			if($row['upass'] == $upass){
 				$_SESSION["uid"] = $row["id"];
 			}
-
+			$connection->close();
 		}
 
-		public function createUser($uname, $upass){
+		public function createUser(){
 
 		$sql = "INSERT INTO users (uname, upass) VALUES (
-			'{$connection->real_escape_string($_POST['uname'])}',
-			'{$connection->real_escape_string($_POST['upass'])}',
+			'{$connection->real_escape_string($uname)}',
+			'{$connection->real_escape_string($upass)}',
 			'{$connection->real_escape_string($_POST['email'])}'";
 			$insert = $connection->query($sql);
+			$connection->close();
 		}
 	}
 ?>
