@@ -1,9 +1,9 @@
 ﻿<?php
-include("dlogin.php");
-
-$account = new dlogin($_POST['uname'], $_POST['upass']);
-$accout->login();
-
+include 'dlogin.php';
+if(!empty($_POST)){
+    $account = new dlogin($_POST['uname'], $_POST['upass']);
+    $account->login();
+}
 ?>
 
 <!DOCTYPE html>
@@ -63,7 +63,7 @@ $accout->login();
             </div>
 
             <div class="bodyContainer">
-                <span class="psw" style="padding-top: 3px;">Don't Have an Account? <a href="createAccount.html">Create One!</a></span>
+                <span class="psw" style="padding-top: 3px;">Don't Have an Account? <a href="createAccount.php">Create One!</a></span>
             </div>
         </form>
 

@@ -4,15 +4,15 @@ class config{
     // Creates a database connection
     private $dbhost = "localhost";
     private $dbuser = "Admin";
-    private $dbpass = "";
+    private $dbpass = "1234";
     private $dbname = "admin";
     protected $connection;
 
-    public static session(){
-        session_start();
+    public static function start(){
+        // session_start();
     }
 
-    public static connect(){
+    public static function connect(){
         $connection = mysqli_connect ($dbhost,$dbuser,$dbpass,$dbname);
 
         if (mysqli_connect_errno()){

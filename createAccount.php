@@ -1,7 +1,9 @@
 ﻿<?php
-include("dlogin.php");
-
-
+include 'dlogin.php';
+if(!empty($_POST)){
+    $account = new dlogin($_POST['uname'], $_POST['upass']);
+    $account->createUser();
+}
 ?>
 
 <!DOCTYPE html>
