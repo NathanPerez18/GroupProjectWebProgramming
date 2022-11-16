@@ -86,9 +86,9 @@
                 <p>
                     <label>Change Material<br></label>
                     <select>
-                        <option id="plastic" value="0" onclick="materialType('plastic')">Plastic</option>
-                        <option id="wood" value="1" onclick="materialType('wood')">Wood</option>
-                        <option id="metal" value="2" onclick="materialType('metal')">Metal</option>
+                        <option name="material" id="plastic" value="0" onclick="materialType('plastic')">Plastic</option>
+                        <option name="material" id="wood" value="1" onclick="materialType('wood')">Wood</option>
+                        <option name="material" id="metal" value="2" onclick="materialType('metal')">Metal</option>
                     </select>
                 </p>
 
@@ -104,9 +104,9 @@
                 <p>
                     <label>Change Legs<br></label>
                     <select>
-                        <option>Classic Metal</option>
-                        <option>Clawfoot</option>
-                        <option>Wheels</option>
+                        <option name="legs">Classic Metal</option>
+                        <option name="legs">Clawfoot</option>
+                        <option name="legs">Wheels</option>
                     </select>
                 </p>
 
