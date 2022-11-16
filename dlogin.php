@@ -3,6 +3,11 @@ class login extends config{
 		
 		private $uname;
 		private $upass;
+		public function _construct($name,$pass){
+			$uname=$name;
+			$upass=$pass;
+		}
+
 
 		public function login(){
 			$sql = "SELECT uname FROM users WHERE uname LIKE '$uname'";
