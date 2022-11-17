@@ -39,7 +39,7 @@ if(!empty($_POST)){
 
         <h1 style="text-align: center;">Login</h1>
 
-        <form action="/action_page.php" method="post">
+        <form action="" method="post">
             <div class="imgContainer">
                 <img src="loginIcon.png" alt="Avatar" class="avatar">
             </div>
