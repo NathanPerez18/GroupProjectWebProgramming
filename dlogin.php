@@ -10,14 +10,19 @@ class dlogin extends config{
 		}
 
 		public function login(){
+			//Creates connection to database
 			$connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
 			if($connection->connect_error){
 				die("Connection failed: ".$connection->connect_error);
 			}
+			//Creates session for session variables
 			session_start();
-
+			
+			//Select query for databse from user table
 			$sql = "SELECT * FROM users WHERE uname = '$this->uname'";
 			$result = $connection->query($sql);
+
+			//Test weather user exists
 			if($result->num_rows > 0){
 				//exists
 			}else{
@@ -25,6 +30,7 @@ class dlogin extends config{
 				return 0;
 			}
 
+			//Test if password is correct for user
 			$row = $result->fetch_assoc();
 			if($row['upass'] == $this->upass){
 				$_SESSION["uid"] = $row["id"];
@@ -32,13 +38,15 @@ class dlogin extends config{
 				echo "Password Incorrect";
 			}
 			$connection->close();
-			
+			//redirect to different page after login
 			header("Location: index.php");
 		}
 
 		public function createUser(){
+		//Creates connection to database
 		$connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
 
+		//Insert query for database to user table
 		$sql = "INSERT INTO users (uname, upass, emailAddress) VALUES (
 			'{$connection->real_escape_string($this->uname)}',
 			'{$connection->real_escape_string($this->upass)}',
@@ -46,6 +54,7 @@ class dlogin extends config{
 			$insert = $connection->query($sql);
 			$connection->close();
 
+			//redirect to login page after account is created
 			header("Location: login.php");
 		}
 	}
