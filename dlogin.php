@@ -45,6 +45,8 @@ class dlogin extends config{
 			'{$connection->real_escape_string($_POST['email'])}')";
 			$insert = $connection->query($sql);
 			$connection->close();
+
+			header("Location: login.php");
 		}
 	}
 ?>
