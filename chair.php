@@ -85,11 +85,12 @@
                 <!--options to change the material of the chair-->
                 <p>
                     <label>Change Material<br></label>
-                    <select>
-                        <option id="plastic" value="0" onclick="materialType('plastic')">Plastic</option>
-                        <option id="wood" value="1" onclick="materialType('wood')">Wood</option>
-                        <option id="metal" value="2" onclick="materialType('metal')">Metal</option>
-                    </select>
+                    <select name="material" ><!--onChange="materialType(this.value)"-->
+                        <option id="plastic" value="0" onChange="materialType('plastic')">Plastic</option>
+                        <option id="wood" value="1" onChange="materialType('wood')">Wood</option>
+                        <option id="metal" value="2" onChange="materialType('metal')">Metal</option>
+                    </select> 
+                  
                 </p>
 
                 <!--options to change the material color-->
@@ -104,18 +105,18 @@
                 <p>
                     <label>Change Legs<br></label>
                     <select>
-                        <option>Classic Metal</option>
-                        <option>Clawfoot</option>
-                        <option>Wheels</option>
+                        <option name="legs" id="cmetal" value="0" onChange="legType('cmetal')">Classic Metal</option>
+                        <option name="legs" id="claw" value="1" onChange="legType('claw')">Clawfoot</option>
+                        <option name="legs" id="wheel" value="2" onChange="legType('wheel')">Wheels</option>
                     </select>
                 </p>
 
                 <!--options to change the leg color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorLegs" value="white"><span class="colorWhite">color</span>
-                    <input type="radio" name="colorLegs" value="grey"><span class="colorGrey">color</span>
-                    <input type="radio" name="colorLegs" value="black"><span class="colorBlack">color</span>
+                    <input type="radio" name="colorLegs" id="lwhite" value="0" onclick="legColor('lwhite')"><span class="colorWhite">color</span>
+                    <input type="radio" name="colorLegs" id="lgrey" value="1" onclick="legColor('lgrey')"><span class="colorGrey">color</span>
+                    <input type="radio" name="colorLegs" id="lblack" value="2" onclick="legColor('lblack')"><span class="colorBlack">color</span>
                 </p>
 
             </form>
