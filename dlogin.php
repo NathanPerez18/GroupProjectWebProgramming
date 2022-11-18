@@ -38,6 +38,7 @@ class dlogin extends config{
 				$_SESSION["uname"] = $row["uname"];
 			}else{
 				$_SESSION["err"] = true;
+				return 0;
 			}
 			$connection->close();
 			//redirect to different page after login
