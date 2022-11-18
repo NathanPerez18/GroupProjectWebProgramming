@@ -2,27 +2,27 @@ var mcolor=0; ///0,1,2
 var material=0;
 var legs=0;
 var lcolor=0;
-//var materialImages = new Array[[0,0]];
-let materialImages = [
-    ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg"],//plastic
-    ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg"],
-    ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg"]
-];
-let legImages = [
-    ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg"],
-    ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg"],
-    ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg"]
-];
+
+let matPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg",
+    "testTable2.jpg", "testChair1.jpg", "testChair2.jpg",
+    "testChair1.jpg", "testChair2.jpg", "testTable1.jpg"];
+//mat 0 1 2  col 0 3 6  mat+col=index
+// 0  0 1 2
+// 3  3 4 5
+// 6  6 7 8
+
+let legPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg", 
+    "testTable2.jpg", "testChair1.jpg", "testChair2.jpg",
+    "testChair1.jpg", "testChair2.jpg", "testTable1.jpg"];
 
 // materialImages[0][0]="testTable1.jpg";
 // materialImages[0][1]="testTable2.jpg";
 // materialImages[0][2]="testChair1.jpg";
 
 
-function materialType(type){
-    //material=parseInt(type);
-    material=parseInt(document.getElementById(type).value);
-
+function materialType(value1){
+    material=parseInt(value1);
+ 
     //onclick "wood" image should change to wood + var color
     // callimage
     callImage("chairM");
@@ -30,6 +30,7 @@ function materialType(type){
 }
 function materialColor(color1){
     mcolor=parseInt(document.getElementById(color1).value);
+    mcolor=mcolor*3;// variable should be 0 3 or 6
 
     //onclick change var color and summons a new image
     // callimage
@@ -37,14 +38,15 @@ function materialColor(color1){
 }
 
 
-function legType(leg){
-    legs = parseInt(document.getElementById(leg).value);
+function legType(value2){
+    legs = parseInt(value2);
 
     callImage("chairL");
 }
 
 function legColor(color2){
     lcolor=parseInt(document.getElementById(color2).value);
+    lcolor=lcolor*3;
 
     callImage("chairL");
 }
@@ -54,23 +56,33 @@ function callImage(whichImage){
     //call image with arr[color][material]
     
     if(whichImage=="chairM"){
-        document.getElementById(whichImage).src= materialImages[material][mcolor];
-        console.log(material);
-        console.log(materialImages[0][0]);
-        console.log(materialImages[0][1]);
-        console.log(materialImages[0][2]);
-        console.log(materialImages[1][0]);
-        console.log(materialImages[1][1]);
-        console.log(materialImages[1][2]);
-        console.log(materialImages[2][0]);
-        console.log(materialImages[2][1]);
-        console.log(materialImages[2][2]);
+
+        let pic1 = material + mcolor;
+
+        document.getElementById(whichImage).src = matPic[pic1];
+
     }
     if(whichImage=="chairL"){
-        document.getElementById(whichImage).src= legImages[legs][lcolor];
+
+        let pic2 = legs + lcolor;
+
+        document.getElementById(whichImage).src = legPic[pic2];
+       
     }
 
 }
+
+function resetClick(name) {
+    // document.getElementById("designBox").src = name;
+    document.getElementById(name).reset();
+    mcolor=0;
+    material=0;
+    legs=0;
+    lcolor=0;
+    callImage("chairM");
+    callImage("chairL");
+ }
+
 
 // function saveChair(){
 //     var chairSave = new Array=[material, mcolor, legs, lcolor];

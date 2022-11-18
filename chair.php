@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="chair.css">
 
 </head>
-<body>
+<body onload="resetClick('designC')">
 
     <script src="updateDesign.js"></script>
     <script src="updateChairDesign.js"></script>
@@ -36,10 +36,10 @@
 
         <!--three buttons at the top: create reset or save-->
         <a href="#">
-            <button type="button" class="createChair" onclick="createNewClick()">Create New Design!</button>
+            <button type="button" class="createChair" onclick="resetClick('designC')">Create New Design</button>
         </a>
         <a href="#">
-            <button type="button" class="resetChair" onclick="resetClick()">Reset Design</button>
+            <button type="button" class="resetChair" onclick="resetClick('designC')">Reset Design</button>
         </a>
         <a href="#">
             <button type="button" class="saveChair">Save Design</button>
@@ -58,9 +58,9 @@
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="chairDesigning">
-            <img id="chairM" src="testChair1.jpg" style="width:100px; height: 100px;">
+            <img id="chairM" src="testTable1.jpg" style="width:100px; height: 100px;">
             <br>
-            <img id="chairL" src="testChair2.jpg" style = "width: 100px; height:100px;">
+            <img id="chairL" src="testTable1.jpg" style = "width: 100px; height:100px;">
 
 
             
@@ -78,17 +78,17 @@
             note: option values were chosen arbitrarily and are
             subject to change -->
         <div class="chairDesignOptions">
-            <form method="" action="">
+            <form  id="designC" method="" action="">
                 <!--title of form-->
                 <legend>Design Options</legend>
 
                 <!--options to change the material of the chair-->
                 <p>
                     <label>Change Material<br></label>
-                    <select name="material" ><!--onChange="materialType(this.value)"-->
-                        <option id="plastic" value="0" onChange="materialType('plastic')">Plastic</option>
-                        <option id="wood" value="1" onChange="materialType('wood')">Wood</option>
-                        <option id="metal" value="2" onChange="materialType('metal')">Metal</option>
+                    <select name="material" onchange="materialType(this.value);"><!--onChange="materialType(this.value)"-->
+                        <option id="plastic" value="0" selected=selected>Plastic</option>
+                        <option id="wood" value="1" >Wood</option>
+                        <option id="metal" value="2" >Metal</option>
                     </select> 
                   
                 </p>
@@ -96,7 +96,7 @@
                 <!--options to change the material color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorUpholstery" id="mwhite" value="0" onclick="materialColor('mwhite')"><span class="colorWhite">color</span>
+                    <input type="radio" name="colorUpholstery" id="mwhite" value="0" onclick="materialColor('mwhite')" checked><span class="colorWhite">color</span>
                     <input type="radio" name="colorUpholstery" id="mgrey" value="1" onclick="materialColor('mgrey')"><span class="colorGrey">color</span>
                     <input type="radio" name="colorUpholstery" id="mblack" value="2" onclick="materialColor('mblack')"><span class="colorBlack">color</span>
                 </p>
@@ -104,17 +104,17 @@
                 <!--options to change the legs of the chair-->
                 <p>
                     <label>Change Legs<br></label>
-                    <select>
-                        <option name="legs" id="cmetal" value="0" onChange="legType('cmetal')">Classic Metal</option>
-                        <option name="legs" id="claw" value="1" onChange="legType('claw')">Clawfoot</option>
-                        <option name="legs" id="wheel" value="2" onChange="legType('wheel')">Wheels</option>
+                    <select name="legs" onchange="legType(this.value);">
+                        <option name="legs" id="cmetal" value="0" selected=selected>Classic Metal</option>
+                        <option name="legs" id="claw" value="1" >Clawfoot</option>
+                        <option name="legs" id="wheel" value="2" >Wheels</option>
                     </select>
                 </p>
 
                 <!--options to change the leg color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorLegs" id="lwhite" value="0" onclick="legColor('lwhite')"><span class="colorWhite">color</span>
+                    <input type="radio" name="colorLegs" id="lwhite" value="0" onclick="legColor('lwhite')" checked><span class="colorWhite">color</span>
                     <input type="radio" name="colorLegs" id="lgrey" value="1" onclick="legColor('lgrey')"><span class="colorGrey">color</span>
                     <input type="radio" name="colorLegs" id="lblack" value="2" onclick="legColor('lblack')"><span class="colorBlack">color</span>
                 </p>
