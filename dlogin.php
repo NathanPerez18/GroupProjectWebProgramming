@@ -34,6 +34,7 @@ class dlogin extends config{
 			$row = $result->fetch_assoc();
 			if($row['upass'] == $this->upass){
 				$_SESSION["uid"] = $row["id"];
+				$_SESSION["uname"] = $row["uname"];
 			}else{
 				echo "Password Incorrect";
 			}
