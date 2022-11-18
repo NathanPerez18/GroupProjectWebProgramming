@@ -17,6 +17,7 @@ class dlogin extends config{
 			}
 			//Creates session for session variables
 			session_start();
+			$_SESSION["err"] = false;
 			
 			//Select query for databse from user table
 			$sql = "SELECT * FROM users WHERE uname = '$this->uname'";
@@ -26,7 +27,7 @@ class dlogin extends config{
 			if($result->num_rows > 0){
 				//exists
 			}else{
-				echo "User does not exist";
+				$_SESSION["err"] = true;
 				return 0;
 			}
 
@@ -36,7 +37,7 @@ class dlogin extends config{
 				$_SESSION["uid"] = $row["id"];
 				$_SESSION["uname"] = $row["uname"];
 			}else{
-				echo "Password Incorrect";
+				$_SESSION["err"] = true;
 			}
 			$connection->close();
 			//redirect to different page after login

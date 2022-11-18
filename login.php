@@ -49,6 +49,17 @@ if(!empty($_POST)){
 
                 <label for="upass"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="upass" required>
+                
+                <p id="usererror" style="text-color: red;"></p>
+               
+               <?php
+                    if(!empty($_POST)){
+                        if($_SESSION["err"]){
+                            echo '<script type="text/javascript"> document.getElementById("usererror").innerHTML = "Username or Password is not correct." </script>';
+                            echo '<script type="text/javascript"> document.getElementById("usererror").style.color = "red" </script>';
+                        }
+                }
+                ?>
 
                 <button type="submit">Login</button>
                 <label>
