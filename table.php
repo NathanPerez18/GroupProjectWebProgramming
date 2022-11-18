@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="table.css">
 
 </head>
-<body>
+<body onload="resetClick('designT')">
 
     <script src="updateDesign.js"></script>
+    <script src="updateTableDesign.js"></script>
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
@@ -35,10 +36,7 @@
 
         <!--three buttons at the top: create reset or save-->
         <a href="#">
-            <button type="button" class="createTable" onclick="createNewClick()">Create New Design!</button>
-        </a>
-        <a href="#">
-            <button type="button" class="resetTable" onclick="resetClick()">Reset Design</button>
+            <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
         </a>
         <a href="#">
             <button type="button" class="saveTable">Save Design</button>
@@ -57,7 +55,11 @@
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="tableDesigning">
-            <img id ="designBox" src="testTable1.jpg" />
+            <img id="tableT" src="testTable1.jpg" style="width:100px; height: 100px;">
+            <br>
+            <img id="tableB" src="testTable1.jpg" style = "width: 100px; height:100px;">
+
+
         </div>
 
         <br>
@@ -72,44 +74,44 @@
             note: option values were chosen arbitrarily and are
             subject to change -->
         <div class="tableDesignOptions" class="radio-toolbar">
-            <form method="" action="">
+            <form id="designT" method="" action="">
                 <!--title of form-->
                 <legend>Design Options</legend>
 
                 <!--options to change the table top-->
                 <p>
                     <label>Change Table Top<br></label>
-                    <select>
-                        <option>Square</option>
-                        <option>Circle</option>
-                        <option>Slatted</option>
+                    <select name="tabletop" onchange="topType(this.value);">
+                        <option id="square" value="0" selected=selected>Square</option>
+                        <option id="circle" value="1" >Circle</option>
+                        <option id="slats" value="2" >Slatted</option>
                     </select>
                 </p>
 
                 <!--options to change the table top color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorTableTop" value="white"><span class="colorWhite">color</span>
-                    <input type="radio" name="colorTableTop" value="grey"><span class="colorGrey">color</span>
-                    <input type="radio" name="colorTableTop" value="black"><span class="colorBlack">color</span>
+                    <input type="radio" id="twhite" name="colorTableTop" value="0" onclick="topColor('twhite')" checked><span class="colorWhite">color</span>
+                    <input type="radio" id="tgrey" name="colorTableTop" value="1" onclick="topColor('tgrey')"><span class="colorGrey">color</span>
+                    <input type="radio" id="tblack" name="colorTableTop" value="2" onclick="topColor('tblack')"><span class="colorBlack">color</span>
                 </p>
 
                 <!--options to change the legs of the table-->
                 <p>
                     <label>Change Legs<br></label>
-                    <select>
-                        <option>Classic Metal</option>
-                        <option>Clawfoot</option>
-                        <option>Wheels</option>
+                    <select name="Tlegs" onchange="tLegType(this.value);">
+                        <option name="Tlegs" id="cmetal" value="0" selected=selected>Classic Metal</option>
+                        <option name="Tlegs" id="claw" value="1">Clawfoot</option>
+                        <option name="Tlegs" id="wheel" value="2">Wheels</option>
                     </select>
                 </p>
 
                 <!--options to change the leg color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorLegs" value="white"><span class="colorWhite">color</span>
-                    <input type="radio" name="colorLegs" value="grey"><span class="colorGrey">color</span>
-                    <input type="radio" name="colorLegs" value="black"><span class="colorBlack">color</span>
+                    <input type="radio" name="colorLegs" id="bwhite" value="0" onclick="tLegColor('bwhite')" checked><span class="colorWhite">color</span>
+                    <input type="radio" name="colorLegs" id="bgrey" value="1" onclick="tLegColor('bgrey')"><span class="colorGrey">color</span>
+                    <input type="radio" name="colorLegs" id="bblack" value="2" onclick="tLegColor('bblack')"><span class="colorBlack">color</span>
                 </p>
 
             </form>

@@ -20,12 +20,6 @@ of the page*/
     border-radius: 50%;
 }
 
-.resetTable{
-    background-color: rgb(255, 162, 23);
-    border-color: rgb(255, 207, 77);
-    padding: 20px;
-    border-radius: 50%;
-}
 
 .saveTable{
     background-color: rgb(57, 255, 50);

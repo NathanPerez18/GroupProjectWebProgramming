@@ -36,11 +36,9 @@
 
         <!--three buttons at the top: create reset or save-->
         <a href="#">
-            <button type="button" class="createChair" onclick="resetClick('designC')">Create New Design</button>
+            <button type="button" class="createChair" onclick="resetClick('designC')">Reset to New Design</button>
         </a>
-        <a href="#">
-            <button type="button" class="resetChair" onclick="resetClick('designC')">Reset Design</button>
-        </a>
+       
         <a href="#">
             <button type="button" class="saveChair">Save Design</button>
         </a>
@@ -87,7 +85,7 @@
                     <label>Change Material<br></label>
                     <select name="material" onchange="materialType(this.value);"><!--onChange="materialType(this.value)"-->
                         <option id="plastic" value="0" selected=selected>Plastic</option>
-                        <option id="wood" value="1" >Wood</option>
+                        <option id="fabric" value="1" >Fabric</option>
                         <option id="metal" value="2" >Metal</option>
                     </select> 
                   
