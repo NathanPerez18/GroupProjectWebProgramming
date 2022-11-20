@@ -28,17 +28,17 @@ class dlogin extends config{
 				//exists
 			}else{
 				$_SESSION["err"] = true;
-				return 0;
 			}
 
-			//Test if password is correct for user
-			$row = $result->fetch_assoc();
-			if($row['upass'] == $this->upass){
-				$_SESSION["uid"] = $row["id"];
-				$_SESSION["uname"] = $row["uname"];
-			}else{
-				$_SESSION["err"] = true;
-				return 0;
+			if($_SESSION["err"]==false){
+				//Test if password is correct for user
+				$row = $result->fetch_assoc();
+				if($row['upass'] == $this->upass){
+					$_SESSION["uid"] = $row["id"];
+					$_SESSION["uname"] = $row["uname"];
+				}else{
+					$_SESSION["err"] = true;
+				}
 			}
 			$connection->close();
 			//redirect to different page after login
