@@ -40,6 +40,7 @@ class dlogin extends config{
 				$_SESSION["err"] = true;
 				return 0;
 			}
+
 			$connection->close();
 			//redirect to different page after login
 			header("Location: index.php");
