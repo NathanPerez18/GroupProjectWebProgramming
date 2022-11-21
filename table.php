@@ -62,9 +62,8 @@
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="tableDesigning">
-            <img id="tableT" src="testTable1.jpg" style="width:100px; height: 100px;">
-            <br>
-            <img id="tableB" src="testTable1.jpg" style = "width: 100px; height:100px;">
+            <img id="tableT" src="testTable1.jpg" class="image">
+            <img id="tableB" src="testTable1.jpg" class="image">
 
 
         </div>
