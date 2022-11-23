@@ -47,7 +47,7 @@
 
     <div class="mainContainer">
 
-        <h2>Design your own furnature</h2>
+        <h2>Design your own furniture</h2>
 
         <div class="bodyContainer" id="mainPage">
             <!--Place Holder image for table-->

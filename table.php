@@ -82,8 +82,8 @@
 
         <!--option menu to change the design,
             note: option values were chosen arbitrarily and are
-            subject to change -->
-        <div class="tableDesignOptions" class="radio-toolbar">
+             subject to change  class="radio-toolbar" -->
+        <div class="tableDesignOptions" >
             <form id="designT" method="" action="">
                 <!--title of form-->
                 <legend>Design Options</legend>
