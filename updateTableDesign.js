@@ -3,9 +3,9 @@ var Top=0; //table top type
 var bottom=0; // table bottom (legs) type
 var bcolor=0;
 
-let tableTPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg",
-    "testTable2.jpg", "testChair1.jpg", "testChair2.jpg",
-    "testChair1.jpg", "testChair2.jpg", "testTable1.jpg"];
+let tableTPic = ["testTable1.jpg", "testTable2.jpg", "slattedTop.png",
+    "testTable2.jpg", "testChair1.jpg", "slattedTop.png",
+    "testChair1.jpg", "testChair2.jpg", "slattedTop.png"];
 //mat 0 1 2  col 0 3 6  mat+col=index
 // 0  0 1 2
 // 3  3 4 5
@@ -84,6 +84,9 @@ function resetClick(name) {
  }
 
 
+function saveTable(){
+    
+}
 // function saveChair(){
 //     var chairSave = new Array=[material, mcolor, legs, lcolor];
 //     var nameOfSave = "name";

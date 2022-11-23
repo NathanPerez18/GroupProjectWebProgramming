@@ -50,7 +50,7 @@
         </a>
        
         <a href="#">
-            <button type="button" class="saveChair">Save Design</button>
+            <button type="button" class="saveChair" onclick="saveClick()">Save Design</button>
         </a>
 
         <br>
@@ -112,8 +112,8 @@
                 <p>
                     <label>Change Legs<br></label>
                     <select name="legs" onchange="legType(this.value);">
-                        <option name="legs" id="cmetal" value="0" selected=selected>Classic Metal</option>
-                        <option name="legs" id="claw" value="1" >Clawfoot</option>
+                        <option name="legs" id="shortLegs" value="0" selected=selected>Short</option>
+                        <option name="legs" id="longLegs" value="1" >Long</option>
                         <option name="legs" id="wheel" value="2" >Wheels</option>
                     </select>
                 </p>

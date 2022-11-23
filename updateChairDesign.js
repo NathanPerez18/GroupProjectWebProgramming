@@ -3,7 +3,7 @@ var material=0;
 var legs=0;
 var lcolor=0;
 
-let matPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg",
+let matPic = ["testTable1.jpg", "testTable2.jpg", "slattedTop.png",
     "testTable2.jpg", "testChair1.jpg", "testChair2.jpg",
     "testChair1.jpg", "testChair2.jpg", "testTable1.jpg"];
 //mat 0 1 2  col 0 3 6  mat+col=index
@@ -11,9 +11,9 @@ let matPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg",
 // 3  3 4 5
 // 6  6 7 8
 
-let legPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg", 
-    "testTable2.jpg", "testChair1.jpg", "testChair2.jpg",
-    "testChair1.jpg", "testChair2.jpg", "testTable1.jpg"];
+let legPic = ["shortChairLegs.png", "LongChairLegs.png", "testChair1.jpg", 
+    "shortChairLegs.png", "LongChairLegs.png", "testChair2.jpg",
+    "shortChairLegs.png", "LongChairLegs.png", "testTable1.jpg"];
 
 // materialImages[0][0]="testTable1.jpg";
 // materialImages[0][1]="testTable2.jpg";
@@ -84,6 +84,12 @@ function resetClick(name) {
  }
 
 
+ function saveClick(){
+    let name= prompt("Name your design: ");
+    console.log(name);
+
+    
+}
 // function saveChair(){
 //     var chairSave = new Array=[material, mcolor, legs, lcolor];
 //     var nameOfSave = "name";
