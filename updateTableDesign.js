@@ -83,10 +83,16 @@ function resetClick(name) {
     callImage("tableB");
  }
 
+function saveClick() {
+    let name = prompt("Name your design: ");
+    document.cookie = "saveCookie=" + name;
+}
 
+/*
 function saveTable(){
     
-}
+}*/
+
 // function saveChair(){
 //     var chairSave = new Array=[material, mcolor, legs, lcolor];
 //     var nameOfSave = "name";

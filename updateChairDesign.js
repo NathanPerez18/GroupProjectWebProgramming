@@ -86,9 +86,8 @@ function resetClick(name) {
 
  function saveClick(){
     let name= prompt("Name your design: ");
-    console.log(name);
-
-    
+     document.cookie = "saveCookie=" + name;
+     console.log(document.cookie);
 }
 // function saveChair(){
 //     var chairSave = new Array=[material, mcolor, legs, lcolor];
