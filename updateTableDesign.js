@@ -1,5 +1,5 @@
 var tcolor=0; ///0,1,2
-var top=0; //table top type
+var Top=0; //table top type
 var bottom=0; // table bottom (legs) type
 var bcolor=0;
 
@@ -20,8 +20,8 @@ let tableBPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg",
 // materialImages[0][2]="testChair1.jpg";
 
 
-function topType(value1){
-    top=parseInt(value1);
+function topType(val){
+    Top=parseInt(val);
  
     //onclick "wood" image should change to wood + var color
     // callimage
@@ -57,7 +57,7 @@ function callImage(whichImage){
     
     if(whichImage=="tableT"){
 
-        let pic1 = top + tcolor;
+        let pic1 = Top + tcolor;
 
         document.getElementById(whichImage).src = tableTPic[pic1];
 
@@ -76,7 +76,7 @@ function resetClick(name) {
     // document.getElementById("designBox").src = name;
     document.getElementById(name).reset();
     tcolor=0;
-    top=0;
+    Top=0;
     bottom=0;
     bcolor=0;
     callImage("tableT");

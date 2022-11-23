@@ -15,7 +15,6 @@
 </head>
 <body onload="resetClick('designT')">
 
-    <script src="updateDesign.js"></script>
     <script src="updateTableDesign.js"></script>
 
     <div class="header">
@@ -92,9 +91,9 @@
                 <p>
                     <label>Change Table Top<br></label>
                     <select name="tabletop" onchange="topType(this.value);">
-                        <option id="square" value="0" selected=selected>Square</option>
-                        <option id="circle" value="1" >Circle</option>
-                        <option id="slats" value="2" >Slatted</option>
+                        <option id="square" value=0 selected=selected>Square</option>
+                        <option id="circle" value=1 >Circle</option>
+                        <option id="slats" value=2 >Slatted</option>
                     </select>
                 </p>
 

@@ -15,7 +15,6 @@
 </head>
 <body onload="resetClick('designC')">
 
-    <script src="updateDesign.js"></script>
     <script src="updateChairDesign.js"></script>
 
     <div class="header">
