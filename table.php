@@ -1,5 +1,10 @@
 ﻿<?php
+    include 'dtable.php';
     session_start();
+    if(!empty($_SESSION["uid"])){
+        $table = new dtable();
+        $table->pullSaves();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +54,7 @@
             <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
         </a>
         <a href="#">
-            <button type="button" class="saveTable">Save Design</button>
+            <input type="submit" form="designT" class="saveTable" value="Save Design"></input>
         </a>
 
         <br>
@@ -57,10 +62,11 @@
         <br>
 
         <!--dropdown menu for the user's previously saved designs-->
-        <select name="savedTable" class="savedMenu">
-            <option>First_save</option>
-            <option>Second_save</option>
-        </select>
+        <form method="POST">
+            <select name="savedTable" class="savedMenu">
+                <option selected=selected>Previous saves</option>
+            </select>
+        </form>
 
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
@@ -109,9 +115,9 @@
                 <p>
                     <label>Change Legs<br></label>
                     <select name="Tlegs" onchange="tLegType(this.value);">
-                        <option name="Tlegs" id="cmetal" value="0" selected=selected>Classic Metal</option>
-                        <option name="Tlegs" id="claw" value="1">Clawfoot</option>
-                        <option name="Tlegs" id="wheel" value="2">Wheels</option>
+                        <option id="cmetal" value="0" selected=selected>Classic Metal</option>
+                        <option id="claw" value="1">Clawfoot</option>
+                        <option id="wheel" value="2">Wheels</option>
                     </select>
                 </p>
 
