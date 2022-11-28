@@ -50,6 +50,9 @@ a button{
     font-weight:bold;
 
 }
+a button:hover{
+    opacity: 80%;
+}
 
 h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
