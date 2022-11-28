@@ -3,9 +3,9 @@ var material=0;
 var legs=0;
 var lcolor=0;
 
-let matPic = ["testTable1.jpg", "testTable2.jpg", "slattedTop.png",
-    "testTable2.jpg", "testChair1.jpg", "testChair2.jpg",
-    "testChair1.jpg", "testChair2.jpg", "testTable1.jpg"];
+let matPic = ["chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "slattedTop.png",
+    "chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "testChair2.jpg",
+    "chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "testTable1.jpg"];
 //mat 0 1 2  col 0 3 6  mat+col=index
 // 0  0 1 2
 // 3  3 4 5

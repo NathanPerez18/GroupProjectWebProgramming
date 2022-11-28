@@ -66,8 +66,8 @@
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="chairDesigning">
-            <img id="chairM" src="testTable1.jpg" class ="image">
-            <img id="chairL" src="testTable1.jpg" class="image">
+            <img id="chairM" src="testTable1.jpg" class ="image" style="height:390px;">
+            <img id="chairL" src="testTable1.jpg" class="image" style="height:130px;">
 
 
             

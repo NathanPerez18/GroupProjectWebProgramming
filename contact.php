@@ -67,7 +67,7 @@
 
         <div class="bodyContainer">
             <div class="image">
-                <!-- <img src = "coolDudes.jpg"> -->
+                <img src = "coolPeeps.png"> 
             </div>
             <div class="text">
                 <h2>Nathan Perez: 100754066</h2>
@@ -117,7 +117,7 @@
 
         <div class="bodyContainer">
             <div class="image">
-                <!-- <img src = "coolDudes.jpg"> -->
+                <img src = "coolPeeps.png">
             </div>
             <div class="text">
                 <h2>Rivka Sagi: 100780926</h2>
