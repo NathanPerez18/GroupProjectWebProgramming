@@ -15,6 +15,12 @@
     animation-fill-mode: both;
 }
 
+/*MyKia title in the header*/
+.headerTitle{
+    font-size: 60px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 /*Header Style Section END*/
 
 /*NavBar Style Rules Section START*/

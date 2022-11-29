@@ -3,17 +3,17 @@ var material=0;
 var legs=0;
 var lcolor=0;
 
-let matPic = ["chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "slattedTop.png",
-    "chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "testChair2.jpg",
-    "chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "testTable1.jpg"];
+let matPic = ["chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "MetalChair.png",
+    "chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "MetalChair.jpg",
+    "chairbackandseat2butwiththeblackremoved.png", "FabricChair.png", "MetalChair.jpg"];
 //mat 0 1 2  col 0 3 6  mat+col=index
 // 0  0 1 2
 // 3  3 4 5
 // 6  6 7 8
 
-let legPic = ["shortChairLegs.png", "LongChairLegs.png", "testChair1.jpg", 
-    "shortChairLegs.png", "LongChairLegs.png", "testChair2.jpg",
-    "shortChairLegs.png", "LongChairLegs.png", "testTable1.jpg"];
+let legPic = ["shortChairLegs.png", "LongChairLegs.png", "onelegchair.png", 
+    "shortChairLegs.png", "LongChairLegs.png", "onelegchair.png",
+    "shortChairLegs.png", "LongChairLegs.png", "onelegchair.png"];
 
 // materialImages[0][0]="testTable1.jpg";
 // materialImages[0][1]="testTable2.jpg";

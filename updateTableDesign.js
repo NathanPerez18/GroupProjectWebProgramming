@@ -3,17 +3,17 @@ var Top=0; //table top type
 var bottom=0; // table bottom (legs) type
 var bcolor=0;
 
-let tableTPic = ["testTable1.jpg", "testTable2.jpg", "slattedTop.png",
-    "testTable2.jpg", "testChair1.jpg", "slattedTop.png",
-    "testChair1.jpg", "testChair2.jpg", "slattedTop.png"];
+let tableTPic = ["SquareTable.png", "CircleTable.png", "slatedTable.png",
+    "SquareTable.png", "CircleTable.png", "slatedTable.png",
+    "SquareTable.png", "CircleTable.png", "slatedTable.png"];
 //mat 0 1 2  col 0 3 6  mat+col=index
 // 0  0 1 2
 // 3  3 4 5
 // 6  6 7 8
 
-let tableBPic = ["testTable1.jpg", "testTable2.jpg", "testChair1.jpg", 
-    "testTable2.jpg", "testChair1.jpg", "testChair2.jpg",
-    "testChair1.jpg", "testChair2.jpg", "testTable1.jpg"];
+let tableBPic = ["wheelLegsInCenter.png", "onecolunm4leg.png", "onelegtable.png", 
+    "wheelLegsInCenter.png", "onecolunm4leg.png", "onelegtable.png",
+    "wheelLegsInCenter.png", "onecolunm4leg.png", "onelegtable.png"];
 
 // materialImages[0][0]="testTable1.jpg";
 // materialImages[0][1]="testTable2.jpg";
