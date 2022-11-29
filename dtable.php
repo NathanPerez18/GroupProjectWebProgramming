@@ -4,13 +4,13 @@ class dtable extends config{
 
     private $saves;
 
-    public function pullSaves(){
+    public function pullSaveNames(){
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
         // session_start();
 
         $id = $_SESSION["uid"];
         
-        $sql = "SELECT * FROM tableoftables WHERE id = '$id'";
+        $sql = "SELECT nameOfSave FROM tableoftables WHERE id = '$id'";
         $result = $connection->query($sql);
 
         $connection->close();
@@ -18,22 +18,34 @@ class dtable extends config{
         $this->saves = $result->fetch_assoc();
 
         if(empty($saves)){
-            $saves[0] = "No Saves Found";
+            $this->saves[0] = "No Saves Found";
         }
+    }
 
-        setcookie('tableSaves', json_encode($saves));
+    public function fetchSave(){
+        if($_POST['savedTable'] != "No Saves Found" && $_POST['savedTable'] != '*TO BE FILLED IN*'){
+            $saveName = $_POST['savedTable'];
+            $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->bdname);
+
+            $sql = "SELECT * FROM tableoftables WHERE nameOfSave = '$saveName'";
+            $result = $connection->query($sql);
+
+            $connection->close();
+
+            $formContent = $result->fetch_assoc();
+            
+            setcookie('formContent', json_encode($formContent));
+        }
     }
 
     public function toDrop(){
-        for($i =0; i<$this->save->num_rows; $i++){
-            echo '<option selected=selected>'.$saves[i]['id']['uname'].'</option>';
-        }
+        setcookie('tableSaves', json_encode($this->saves));
     }
 
     public function createSave(){
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->bdname);
         $name = json_decode(stripslashes($_COOKIE['saveCookie']));
-        $sql = "INSERT INTO users (id, nameOfSave, ema) VALUES (
+        $sql = "INSERT INTO users (id, nameOfSave, top, topColor, legs, legColor) VALUES (
 			'{$connection->real_escape_string($_SESSION['uid'])}',
 			'{$connection->real_escape_string($name)}',
             '{$connection->real_escape_string($_POST['tabletop'])}',

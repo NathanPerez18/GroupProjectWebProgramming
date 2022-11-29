@@ -1,9 +1,15 @@
 ﻿<?php
     include 'dtable.php';
     session_start();
+
+    $table = new dtable();
+    
     if(!empty($_SESSION["uid"])){
-        $table = new dtable();
-        $table->pullSaves();
+        $table->pullSaveNames();
+    }
+//implement creating a save
+    if(!empty($_POST["tabletop"])){
+        $table->createSave();
     }
 ?>
 
@@ -63,8 +69,12 @@
 
         <!--dropdown menu for the user's previously saved designs-->
         <form method="POST">
+            <!-- add: onchange='if(this.value != 0) {this.form.submit();}' -->
             <select name="savedTable" class="savedMenu">
                 <option selected=selected>Previous saves</option>
+                <?php
+                    // $table->toDrop();
+                ?>
             </select>
         </form>
 
@@ -89,7 +99,7 @@
             note: option values were chosen arbitrarily and are
              subject to change  class="radio-toolbar" -->
         <div class="tableDesignOptions" >
-            <form id="designT" method="" action="">
+            <form id="designT" method="post" action="">
                 <!--title of form-->
                 <legend>Design Options</legend>
 
