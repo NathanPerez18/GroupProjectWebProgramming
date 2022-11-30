@@ -82,11 +82,13 @@
     </div> -->
 
     <div class="footerBar">
-        <!-- <hr style="height: 3px;background-color: black;"> -->
+        <div class="insideFooter">
         <p><a href="index.php">Home</a></p>
         <p><a href="login.php">Login</a></p>
         <p><a href="contact.php">Contact Us</a></p>
         <p>MyKia &copy</p>
+        <p>Copyright LRNJ 2022<span>&copy;</span></p>
+        </div>
     </div>
 
 </body>

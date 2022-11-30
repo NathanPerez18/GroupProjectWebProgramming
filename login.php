@@ -21,7 +21,7 @@ if(!empty($_POST)){
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
-        <h2 class="headerTitle"> MyKia</h2>
+        <h2 class="headerTitle" style="padding-right: 20px;"> MyKia</h2>
     </div>
 
     <div class="navBar">
@@ -80,11 +80,13 @@ if(!empty($_POST)){
     </div>
 
     <div class="footerBar">
+        <div class="insideFooter">
         <p><a href="index.php">Home</a></p>
         <p><a href="login.php">Login</a></p>
         <p><a href="contact.php">Contact Us</a></p>
         <p>MyKia &copy</p>
         <p>Copyright LRNJ 2022<span>&copy;</span></p>
+        </div>
     </div>
 
 </body>

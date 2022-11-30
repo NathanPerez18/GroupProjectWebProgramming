@@ -58,12 +58,13 @@ a button{
     background-color: rgb(1, 1, 122);
     color: rgb(205, 224, 230);
     border-color: rgb(1, 1, 122);
-    border-radius: 1em;
     white-space: nowrap;
     margin-bottom: 5px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 15px;
-    border-radius: 50%;
+    /* border-radius: 20%; */
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
     font-size: 20pt;
     font-weight:bold;
 

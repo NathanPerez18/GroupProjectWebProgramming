@@ -84,9 +84,14 @@
 .footerBar {
     border-top: 8px solid rgb(32, 32, 32);
     line-height: 50px;
-    padding: 60px;
+    /* padding: 60px; */
     height: 300px;
     width: 100%;
+    /* background-color: lightgray; */
+    margin-top: 80px;
+}
+.insideFooter{
+    padding: 60px;
     background-color: lightgray;
 }
 /*FooterBar Style Section END*/
