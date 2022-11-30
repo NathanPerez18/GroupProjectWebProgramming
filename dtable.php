@@ -6,24 +6,26 @@ class dtable extends config{
 
     public function pullSaveNames(){
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
-        // session_start();
 
         $id = $_SESSION["uid"];
         
         $sql = "SELECT nameOfSave FROM tableoftables WHERE id = '$id'";
         $result = $connection->query($sql);
 
-        $connection->close();
-                
         $this->saves = $result->fetch_assoc();
-
-        if(empty($saves)){
-            $this->saves[0] = "No Saves Found";
+   
+        if(empty($this->saves)){
+            $this->saves[0] = "NoSavesFound";
         }
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo $row["nameOfSave"];
+        }
+
+        $connection->close();
     }
 
     public function fetchSave(){
-        if($_POST['savedTable'] != "No Saves Found" && $_POST['savedTable'] != '*TO BE FILLED IN*'){
+        if($_POST['savedTable'] != "NoSavesFound" && $_POST['savedTable'] != '*TO BE FILLED IN*'){
             $saveName = $_POST['savedTable'];
             $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
 
@@ -55,6 +57,7 @@ class dtable extends config{
 			'{$connection->real_escape_string($_POST['colorLegs'])}')";
         $connection->query($sql);
         $connection->close();
+        header("Location: table.php");
     }
 }
 ?>
