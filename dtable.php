@@ -23,10 +23,10 @@ class dtable extends config{
                 $check += 1;
             }
         }
-        echo $this->saves[0];
-        echo $this->saves[1];
-
-
+       //php echo test function
+    //    for($i = 0; $i< sizeof($this->saves); $i++){
+    //     echo $this->saves[$i];
+    //    }
     }
 
     public function fetchSave(){
@@ -41,7 +41,7 @@ class dtable extends config{
 
             $formContent = $result->fetch_assoc();
             
-            setcookie('formContent', json_encode($formContent));
+            setcookie('formContent', json_encode($formContent), time()+2);
         }
     }
 
