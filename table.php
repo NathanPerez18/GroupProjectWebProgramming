@@ -7,6 +7,10 @@
     if(!empty($_SESSION["uid"])){
         $table->pullSaveNames();
     }
+
+    if(array_key_exists('saveButton', $_POST)){
+        $table->createSave();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -26,12 +30,12 @@
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
-        <h2> MyKia</h2>
+        <h2 class="headerTitle"> MyKia</h2>
         <?php
             if(!empty($_SESSION["uname"])){
-            echo "<h3 style='padding-right: 6px;'> Welcome, ". $_SESSION["uname"]."!</h3>";
+            echo "<h3 style='padding-right: 25px;'> Welcome, ". $_SESSION["uname"]."</h3>";
             }else {
-                echo "<h3 style='padding-right: 6px;'> Welcome, User!!</h3>";
+                echo "<h3 style='padding-right: 25px;'> Welcome, User</h3>";
             }
         ?>
         <!-- <h3 style="padding-right: 6px;"> Welcome, User!!</h3> -->
@@ -57,14 +61,8 @@
             <a href="#">
                 <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
             </a>
-            <a href="#">
-                <input type="submit" form="designT" class="saveTable" value="saveDesign" onclick="saveClick()"></input>
-            </a>
-            <?php
-                if(!empty($_POST["saveDesign"])){
-                    $table->createSave();
-                }
-            ?>
+            
+            <input type="submit" name="saveButton" form="designT" class="saveTable" value="Save Design" onclick="saveClick()"></input>
         </form>
         <br>
         <br>
@@ -102,7 +100,7 @@
             note: option values were chosen arbitrarily and are
              subject to change  class="radio-toolbar" -->
         <div class="tableDesignOptions" >
-            <form id="designT" method="post" action="">
+            <form id="designT" method="POST">
                 <!--title of form-->
                 <legend>Design Options</legend>
 

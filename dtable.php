@@ -25,7 +25,7 @@ class dtable extends config{
     public function fetchSave(){
         if($_POST['savedTable'] != "No Saves Found" && $_POST['savedTable'] != '*TO BE FILLED IN*'){
             $saveName = $_POST['savedTable'];
-            $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->bdname);
+            $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
 
             $sql = "SELECT * FROM tableoftables WHERE nameOfSave = '$saveName'";
             $result = $connection->query($sql);
@@ -46,7 +46,7 @@ class dtable extends config{
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
         $name = json_decode(stripslashes($_COOKIE['saveCookie']));
 
-        echo "<script>console.log('{$_COOKIE}');</script>";
+        // echo "<script>console.log('{$_COOKIE}');</script>";
         echo "<script>console.log('{$name}');</script>";
 
         $sql = "INSERT INTO tableoftables (id, nameOfSave, top, topColor, legs, legColor) VALUES (
