@@ -11,6 +11,10 @@ a button{
     font-family: Lucida Sans, sans-serif;
 }
 
+h3{
+    letter-spacing: 1px;
+}
+
 /*following three blocks are the three oval shaped buttons at the top 
 of the page*/
 .createChair{

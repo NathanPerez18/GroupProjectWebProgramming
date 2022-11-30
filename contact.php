@@ -16,12 +16,12 @@
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
-        <h2> MyKia</h2>
+        <h2 class="headerTitle"> MyKia</h2>
         <?php
             if(!empty($_SESSION["uname"])){
-            echo "<h3 style='padding-right: 6px;'> Welcome, ". $_SESSION["uname"]."!</h3>";
+            echo "<h3 style='padding-right: 25px;'> Welcome, ". $_SESSION["uname"]."</h3>";
             }else {
-                echo "<h3 style='padding-right: 6px;'> Welcome, User!!</h3>";
+                echo "<h3 style='padding-right: 25px;'> Welcome, User</h3>";
             }
         ?>
         <!-- <h3 style="padding-right: 6px;"> Welcome, User!!</h3> -->

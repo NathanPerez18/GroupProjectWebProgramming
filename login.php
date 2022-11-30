@@ -21,7 +21,7 @@ if(!empty($_POST)){
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
-        <h2> MyKia</h2>
+        <h2 class="headerTitle"> MyKia</h2>
     </div>
 
     <div class="navBar">
