@@ -12,16 +12,21 @@ class dtable extends config{
         $sql = "SELECT nameOfSave FROM tableoftables WHERE id = '$id'";
         $result = $connection->query($sql);
 
-        $this->saves = $result->fetch_assoc();
-   
-        if(empty($this->saves)){
-            $this->saves[0] = "NoSavesFound";
-        }
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo $row["nameOfSave"];
-        }
-
         $connection->close();
+
+        if($result->num_rows == 0){
+            $this->saves[0] = "No Saves Found";
+        }else{
+            $check = 0;
+            while ($temp = mysqli_fetch_assoc($result)){
+                $this->saves[$check] = $temp['nameOfSave'];
+                $check += 1;
+            }
+        }
+        echo $this->saves[0];
+        echo $this->saves[1];
+
+
     }
 
     public function fetchSave(){
@@ -57,9 +62,10 @@ class dtable extends config{
 			'{$connection->real_escape_string($_POST['colorLegs'])}')";
         
         $connection->query($sql);
-        
+
         $connection->close();
-        header("Location: table.php");
+
+        header("Location: table.php");       
     }
 }
 ?>
