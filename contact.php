@@ -143,7 +143,10 @@
     </div>
 
     <div class="footerBar">
-        <p>FOOTER TEST TEXT</p>
+        <p><a href="index.php">Home</a></p>
+        <p><a href="login.php">Login</a></p>
+        <p><a href="contact.php">Contact Us</a></p>
+        <p>MyKia &copy</p>
     </div>
 
 </body>

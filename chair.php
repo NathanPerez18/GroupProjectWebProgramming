@@ -141,7 +141,10 @@
 
     <!--pretend contact info for aesthetic purposes-->
     <div class="footerBar">
-        <p>Contact us for help: <br>fake.email@gmail.com</p>
+        <p><a href="index.php">Home</a></p>
+        <p><a href="login.php">Login</a></p>
+        <p><a href="contact.php">Contact Us</a></p>
+        <p>MyKia &copy</p>
     </div>
 
     <hr>
