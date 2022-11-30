@@ -1,4 +1,5 @@
 ﻿<?php
+   // include 'dchair.php';
     session_start();
 ?>
 
@@ -45,13 +46,11 @@
     <div class="mainContainer">
 
         <!--three buttons at the top: create reset or save-->
-        <a href="#">
+        <form method="POST">
             <button type="button" class="createChair" onclick="resetClick('designC')">Reset to New Design</button>
-        </a>
        
-        <a href="#">
-            <button type="button" class="saveChair" onclick="saveClick()">Save Design</button>
-        </a>
+            <input type="submit" class="saveChair" onclick="saveClick()">Save Design</button>
+        </form>
 
         <br>
         <br>
