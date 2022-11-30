@@ -85,7 +85,8 @@ function resetClick(name) {
 
 function saveClick() {
     let name = prompt("Name your design: ");
-    document.cookie = "saveCookie=" + name;
+    document.cookie = "saveCookie=" + name+"; SameSite=None; Secure";
+    console.log(document.cookie);
 }
 
 /*

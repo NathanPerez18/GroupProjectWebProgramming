@@ -43,9 +43,13 @@ class dtable extends config{
     }
 
     public function createSave(){
-        $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->bdname);
+        $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
         $name = json_decode(stripslashes($_COOKIE['saveCookie']));
-        $sql = "INSERT INTO users (id, nameOfSave, top, topColor, legs, legColor) VALUES (
+
+        echo "<script>console.log('{$_COOKIE}');</script>";
+        echo "<script>console.log('{$name}');</script>";
+
+        $sql = "INSERT INTO tableoftables (id, nameOfSave, top, topColor, legs, legColor) VALUES (
 			'{$connection->real_escape_string($_SESSION['uid'])}',
 			'{$connection->real_escape_string($name)}',
             '{$connection->real_escape_string($_POST['tabletop'])}',

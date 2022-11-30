@@ -7,10 +7,6 @@
     if(!empty($_SESSION["uid"])){
         $table->pullSaveNames();
     }
-//implement creating a save
-    if(!empty($_POST["tabletop"])){
-        $table->createSave();
-    }
 ?>
 
 <!DOCTYPE html>
@@ -55,14 +51,21 @@
         except the footer division at the bottom-->
     <div class="mainContainer">
 
-        <!--three buttons at the top: create reset or save-->
-        <a href="#">
-            <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
-        </a>
-        <a href="#">
-            <input type="submit" form="designT" class="saveTable" value="Save Design"></input>
-        </a>
+        <!--two buttons at the top: reset or save-->
 
+        <form method="POST">
+            <a href="#">
+                <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
+            </a>
+            <a href="#">
+                <input type="submit" form="designT" class="saveTable" value="saveDesign" onclick="saveClick()"></input>
+            </a>
+            <?php
+                if(!empty($_POST["saveDesign"])){
+                    $table->createSave();
+                }
+            ?>
+        </form>
         <br>
         <br>
         <br>
@@ -73,7 +76,7 @@
             <select name="savedTable" class="savedMenu">
                 <option selected=selected>Previous saves</option>
                 <?php
-                    // $table->toDrop();
+                    $table->toDrop();
                 ?>
             </select>
         </form>
