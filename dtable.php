@@ -55,7 +55,9 @@ class dtable extends config{
             '{$connection->real_escape_string($_POST['colorTableTop'])}',
             '{$connection->real_escape_string($_POST['Tlegs'])}',
 			'{$connection->real_escape_string($_POST['colorLegs'])}')";
+        
         $connection->query($sql);
+        
         $connection->close();
         header("Location: table.php");
     }
