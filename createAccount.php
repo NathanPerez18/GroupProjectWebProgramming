@@ -65,7 +65,7 @@ if(!empty($_POST)){
             </div>
 
             <div class="bodyContainer" style="background-color: #f1f1f1; border-radius: 2%;">
-                <button type="button" class="cancelbtn" >Cancel</button>
+                <button type="button" class="cancelbtn" href="login.php">Cancel</button>
             </div>
 
         </form>
