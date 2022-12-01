@@ -83,6 +83,8 @@ function resetClick(name) {
     bcolor=0;
     callImage("tableT");
     callImage("tableB");
+
+    clicked = false;
  }
 
 function saveClick() {
@@ -93,17 +95,18 @@ function saveClick() {
 
 
 function updateDropdown() {
+    console.log(clicked);
     if (!clicked) {
         clicked = true;
 
         for (let i = 0; i < document.cookie.split("; ").length; i++) {
             var cookieValue = document.cookie.split("; ");
 
-            //console.log(cookieValue[i]);
+            console.log(cookieValue[i]);
 
             var name = cookieValue[i].split("=");
-            if (name[0] == "nameOfSave" + i) {
-               // console.log(name[1]);
+            if (name[0].includes("nameOfSave")) {
+                console.log(name[1]);
 
                 var option = document.createElement('option');
                 option.text = option.value = name[1];
