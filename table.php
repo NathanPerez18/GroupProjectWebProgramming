@@ -68,7 +68,7 @@
         <!--dropdown menu for the user's previously saved designs-->
         <form method="POST">
             <!-- add: onchange='if(this.value != 0) {this.form.submit();}' -->
-            <select name="savedTable" class="savedMenu">
+            <select name="savedTable" class="savedMenu" onclick= "updateDropdown()" id="saveDropdown">
                 <option selected=selected>Previous saves</option>
                 <?php
                     $table->toDrop();

@@ -1,7 +1,9 @@
 var tcolor=0; ///0,1,2
 var Top=0; //table top type
 var bottom=0; // table bottom (legs) type
-var bcolor=0;
+var bcolor = 0;
+
+let clicked = false;
 
 let tableTPic = ["B_SquareTable.png", "B_CircleTable.png", "B_SlatedTable.png",
     "G_SquareTable.png", "G_CircleTable.png", "G_SlatedTable.png",
@@ -86,13 +88,31 @@ function resetClick(name) {
 function saveClick() {
     let name = prompt("Name your design: ");
     document.cookie = "saveCookie=" + name+"; SameSite=None; Secure";
-    console.log(document.cookie);
+    //console.log(document.cookie);
 }
 
-/*
-function saveTable(){
-    
-}*/
+
+function updateDropdown() {
+    if (!clicked) {
+        clicked = true;
+
+        for (let i = 0; i < document.cookie.split("; ").length; i++) {
+            var cookieValue = document.cookie.split("; ");
+
+            //console.log(cookieValue[i]);
+
+            var name = cookieValue[i].split("=");
+            if (name[0] == "nameOfSave" + i) {
+               // console.log(name[1]);
+
+                var option = document.createElement('option');
+                option.text = option.value = name[1];
+                document.getElementById("saveDropdown").appendChild(option);
+
+            }
+        }
+    }
+}
 
 // function saveChair(){
 //     var chairSave = new Array=[material, mcolor, legs, lcolor];
