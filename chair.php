@@ -49,7 +49,7 @@
         <form method="POST">
             <button type="button" class="createChair" onclick="resetClick('designC')">Reset to New Design</button>
        
-            <input type="submit" class="saveChair" onclick="saveClick()">Save Design</button>
+            <input type="submit" class="saveChair" onclick="saveClick()" value = "Save Design"></input>
         </form>
 
         <br>
@@ -132,19 +132,22 @@
         <!--deleted third div because it wasn't necesary -->
 
     </div>
-
+<!-- 
     <br>
-    <br>
+    <br> -->
 
-    <hr>
 
 
     <!--pretend contact info for aesthetic purposes-->
     <div class="footerBar">
-        <p>Contact us for help: <br>fake.email@gmail.com</p>
+        <div class="insideFooter">
+        <p><a href="index.php">Home</a></p>
+        <p><a href="login.php">Login</a></p>
+        <p><a href="contact.php">Contact Us</a></p>
+        <p>MyKia &copy</p>
+        <p>Copyright LRNJ 2022<span>&copy;</span></p>
+        </div>
     </div>
-
-    <hr>
 
 </body>
 </html>

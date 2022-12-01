@@ -17,6 +17,10 @@ h1{
 
 }
 
+h3{
+    letter-spacing: 1px;
+}
+
 img{
     width: 300pt;
     height: 200pt;
@@ -53,9 +57,3 @@ img{
     border: 3pt inset rgb(254, 242, 201);
 }
 
-/*the division block for the footer at the bottom of the page*/
-.footerBar {
-    height: 10vh;
-    width: 100%;
-    border: 5px;
-}

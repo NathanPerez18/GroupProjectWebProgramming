@@ -1,5 +1,6 @@
 ﻿* {
     margin:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /*Header Style Rules Section START*/
@@ -19,6 +20,8 @@
 .headerTitle{
     font-size: 60px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 5px;
+    text-decoration: none;
 }
 
 /*Header Style Section END*/
@@ -79,10 +82,16 @@
 
 /*FooterBar Style Rules Section START*/
 .footerBar {
-    height: 10vh;
+    border-top: 8px solid rgb(32, 32, 32);
+    line-height: 50px;
+    /* padding: 60px; */
+    height: 300px;
     width: 100%;
-    border: 5px;
+    /* background-color: lightgray; */
+    margin-top: 80px;
+}
+.insideFooter{
+    padding: 60px;
     background-color: lightgray;
-    bottom: 0;
 }
 /*FooterBar Style Section END*/

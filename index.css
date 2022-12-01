@@ -1,13 +1,14 @@
 body{
     background-color: rgb(233, 243, 247);
-    font-family: Century Gothic, Lucida Sans, sans-serif;
+    /* font-family: Century Gothic, Lucida Sans, sans-serif; */
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     /* background-image: url("MyKiaLogoCentered.png");
     background-size: 300px 200px;
     background-repeat: repeat-x; */
 }
 .mainContainer {
     text-align: center;
-    height: 50em;
+    height: 38em;
     padding-top: 30px;
     width: 600px;
     margin-left: auto;
@@ -36,16 +37,34 @@ body{
     text-align: left;
 }
 
+.decorate1{
+    border:rgb(183, 198, 203);
+    border-style: solid none solid none;
+    border-width: 5px;
+    height: 250px;
+    opacity: calc(75%);
+    background-image: url("indexBackground.png");
+    background-size: 350px 250px;
+    background-repeat: repeat-x; 
+    margin-bottom: 150px;
+}
+
+.reviewBox{
+    padding: 30px;
+    line-height: 25px;
+}
+
 a button{
     background-color: rgb(1, 1, 122);
     color: rgb(205, 224, 230);
     border-color: rgb(1, 1, 122);
-    border-radius: 1em;
     white-space: nowrap;
     margin-bottom: 5px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 15px;
-    border-radius: 50%;
+    /* border-radius: 20%; */
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
     font-size: 20pt;
     font-weight:bold;
 
@@ -57,17 +76,23 @@ a button:hover{
 h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: white;
-    font-size: 60pt;
+    font-size: 65pt;
     color:rgb(1, 1, 122);
-    border-bottom: 10pt dashed rgb(205, 224, 230);
-    padding-top: 50px;
-    padding-bottom: 50px;
-    border-top: 2pt solid rgb(205, 224, 230);
-    text-align: center;
+    border-bottom: 10pt dashed rgb(183, 198, 203);
+    padding-top: 75px;
+    padding-bottom: 75px;
+    border-top: 2pt solid rgb(183, 198, 203);
+    height: 100pt;
 }
-p{
-    text-align:right;
-    margin-top:10px;
+
+h2{
+    font-size:40px;
+    text-decoration: underline;
+    /* padding: 20px; */
+}
+
+h3{
+    /* margin-top:10px; */
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -81,12 +106,13 @@ p{
     margin-left: auto;
     margin-right: auto;
     margin-top: 20pt;
-    margin-bottom: 30pt;
+    margin-bottom: 100pt;
+    text-align: center;
 }
 
 .leftLogo{
     background-image: url("centerdlogoforRivka.png");
-    background-size: 350px 305px;
+    background-size: 345px 305px;
     background-repeat: no-repeat;
     background-position: center;
     float:left;
@@ -95,7 +121,7 @@ p{
 }
 .rightLogo{
     background-image: url("centerdlogoforRivka.png");
-    background-size: 350px 305px;
+    background-size: 345px 305px;
     background-repeat: no-repeat;
     background-position: center;
     float:right;

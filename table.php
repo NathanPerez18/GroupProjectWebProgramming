@@ -58,10 +58,7 @@
         <!--two buttons at the top: reset or save-->
 
         <form method="POST">
-            <a href="#">
-                <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
-            </a>
-            
+            <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
             <input type="submit" name="saveButton" form="designT" class="saveTable" value="Save Design" onclick="saveClick()"></input>
         </form>
         <br>

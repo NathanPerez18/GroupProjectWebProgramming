@@ -6,7 +6,6 @@ class dtable extends config{
 
     public function pullSaveNames(){
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
-        // session_start();
 
         $id = $_SESSION["uid"];
         
@@ -14,16 +13,24 @@ class dtable extends config{
         $result = $connection->query($sql);
 
         $connection->close();
-                
-        $this->saves = $result->fetch_assoc();
 
-        if(empty($saves)){
+        if($result->num_rows == 0){
             $this->saves[0] = "No Saves Found";
+        }else{
+            $check = 0;
+            while ($temp = mysqli_fetch_assoc($result)){
+                $this->saves[$check] = $temp['nameOfSave'];
+                $check += 1;
+            }
         }
+       //php echo test function
+    //    for($i = 0; $i< sizeof($this->saves); $i++){
+    //     echo $this->saves[$i];
+    //    }
     }
 
     public function fetchSave(){
-        if($_POST['savedTable'] != "No Saves Found" && $_POST['savedTable'] != '*TO BE FILLED IN*'){
+        if($_POST['savedTable'] != "NoSavesFound" && $_POST['savedTable'] != '*TO BE FILLED IN*'){
             $saveName = $_POST['savedTable'];
             $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
 
@@ -34,7 +41,7 @@ class dtable extends config{
 
             $formContent = $result->fetch_assoc();
             
-            setcookie('formContent', json_encode($formContent));
+            setcookie('formContent', json_encode($formContent), time()+2);
         }
     }
 
@@ -55,8 +62,10 @@ class dtable extends config{
 			'{$connection->real_escape_string($_POST['colorLegs'])}')";
         
         $connection->query($sql);
-        
+
         $connection->close();
+
+        header("Location: table.php");       
     }
 }
 ?>

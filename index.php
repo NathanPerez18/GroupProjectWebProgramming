@@ -17,12 +17,12 @@
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
-        <h2> MyKia</h2>
+        <h2 class="headerTitle"> MyKia</h2>
         <?php
             if(!empty($_SESSION["uname"])){
-            echo "<h3 style='padding-right: 6px;'> Welcome, ". $_SESSION["uname"]."!</h3>";
+            echo "<h3 style='padding-right: 25px;'> Welcome, ". $_SESSION["uname"]."</h3>";
             }else {
-                echo "<h3 style='padding-right: 6px;'> Welcome, User!!</h3>";
+                echo "<h3 style='padding-right: 25px;'> Welcome, User</h3>";
             }
         ?>
         <!-- <h3 style="padding-right: 6px;"> Welcome, User!!</h3> -->
@@ -41,13 +41,13 @@
         <div class="leftLogo"></div>
         <div class="rightLogo"></div>
         <h1>Welcome to MyKia</h1>
-        <p>Get started by logging in, then start designing</p>
 
     </div>
 
     <div class="mainContainer">
 
         <h2>Design your own furniture</h2>
+        <h3>Get started by logging in, then start designing</h3>
 
         <div class="bodyContainer" id="mainPage">
             <!--Place Holder image for table-->
@@ -72,10 +72,23 @@
     </div>
 
     <br>
+    <div class="decorate1"></div>
+    <br>
+    <!-- <hr>
+    <div class="reviewBox">
+    <h3>Reviews</h3>
+    <p><strong>0/10</strong><br>I ordered a chair and it didn't have back legs >:C </p>
+
+    </div> -->
 
     <div class="footerBar">
-        <hr style="height: 3px;background-color: black;">
-        <p>FOOTER TEST TEXT</p>
+        <div class="insideFooter">
+        <p><a href="index.php">Home</a></p>
+        <p><a href="login.php">Login</a></p>
+        <p><a href="contact.php">Contact Us</a></p>
+        <p>MyKia &copy</p>
+        <p>Copyright LRNJ 2022<span>&copy;</span></p>
+        </div>
     </div>
 
 </body>

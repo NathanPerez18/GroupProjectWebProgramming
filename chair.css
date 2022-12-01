@@ -11,6 +11,10 @@ a button{
     font-family: Lucida Sans, sans-serif;
 }
 
+h3{
+    letter-spacing: 1px;
+}
+
 /*following three blocks are the three oval shaped buttons at the top 
 of the page*/
 .createChair{
@@ -128,9 +132,3 @@ span.colorBlack{
     width: 300px;
 }
 
-/*the division block for the footer at the bottom of the page*/
-.footerBar {
-    height: 10vh;
-    width: 100%;
-    border: 5px;  
-}

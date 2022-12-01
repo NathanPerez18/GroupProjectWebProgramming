@@ -16,12 +16,12 @@
 
     <div class="header">
         <img src="WebProgrammingLogo.png" alt="MyKia" style="width: 150px; height: 100px;">
-        <h2> MyKia</h2>
+        <h2 class="headerTitle"> MyKia</h2>
         <?php
             if(!empty($_SESSION["uname"])){
-            echo "<h3 style='padding-right: 6px;'> Welcome, ". $_SESSION["uname"]."!</h3>";
+            echo "<h3 style='padding-right: 25px;'> Welcome, ". $_SESSION["uname"]."</h3>";
             }else {
-                echo "<h3 style='padding-right: 6px;'> Welcome, User!!</h3>";
+                echo "<h3 style='padding-right: 25px;'> Welcome, User</h3>";
             }
         ?>
         <!-- <h3 style="padding-right: 6px;"> Welcome, User!!</h3> -->
@@ -143,7 +143,13 @@
     </div>
 
     <div class="footerBar">
-        <p>FOOTER TEST TEXT</p>
+        <div class="insideFooter">
+        <p><a href="index.php">Home</a></p>
+        <p><a href="login.php">Login</a></p>
+        <p><a href="contact.php">Contact Us</a></p>
+        <p>MyKia &copy</p>
+        <p>Copyright LRNJ 2022<span>&copy;</span></p>
+        </div>
     </div>
 
 </body>
