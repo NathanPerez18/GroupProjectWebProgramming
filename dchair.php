@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include 'config.php';
 class chair extends config{
     private $saves;
