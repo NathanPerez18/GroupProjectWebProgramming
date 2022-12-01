@@ -123,8 +123,8 @@
                 <p>
                     <label>Change Legs<br></label>
                     <select name="Tlegs" onchange="tLegType(this.value);">
-                        <option id="cmetal" value="0" selected=selected>Classic Metal</option>
-                        <option id="claw" value="1">Clawfoot</option>
+                        <option id="round" value="0" selected=selected>Round</option>
+                        <option id="crossed" value="1">Crossed</option>
                         <option id="wheel" value="2">Wheels</option>
                     </select>
                 </p>
