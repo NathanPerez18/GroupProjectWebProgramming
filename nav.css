@@ -5,13 +5,13 @@
 
 /*Header Style Rules Section START*/
 .header {
-    background-color: lightgray;
+    background-color: rgb(164, 155, 155);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    animation: fadeInAnimation ease-out 1s;
+    /* animation: fadeInAnimation ease-out 1s; */
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
@@ -92,6 +92,18 @@
 }
 .insideFooter{
     padding: 60px;
-    background-color: lightgray;
+    padding-left: 100px;
+    padding-top: 0px;
+    background-color: rgb(164, 155, 155);
+}
+
+.insideFooterTitle{
+    /* background-color: black;
+    color:white; */
+    background-color: rgb(164, 155, 155);
+    padding: 60px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    text-decoration:underline;
 }
 /*FooterBar Style Section END*/

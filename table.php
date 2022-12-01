@@ -148,14 +148,18 @@
     <br>
     <br>
 
-    <hr>
-
-    <!--pretend contact info for aesthetic purposes-->
     <div class="footerBar">
-        <p>Contact us for help: <br>fake.email@gmail.com</p>
+    <div class="insideFooterTitle">
+                <h2>Find Page</h2>
+        </div>
+        <div class="insideFooter">
+        <p><a href="index.php">Home</a></p>
+        <p><a href="login.php">Login</a></p>
+        <p><a href="contact.php">Contact Us</a></p>
+        <p>MyKia &copy</p>
+        <p>Copyright LRNJ 2022<span>&copy;</span></p>
+        </div>
     </div>
-
-    <hr>
 
 </body>
 </html>

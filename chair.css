@@ -86,10 +86,10 @@ div.chairDesignOptions label{
     text-decoration: underline;
 }
 
-span.colorWhite{
-    background-color: white;
+span.colorB{
+    background-color: rgb(164, 228, 240);
     border: 1px solid black;
-    color: white;
+    color: rgb(164, 228, 240);
     padding: 10px 10px;
     margin: 10px 10px 10px 10px;
     text-align: center;
@@ -98,10 +98,10 @@ span.colorWhite{
     font-size: 16px;
 }
 
-span.colorGrey{
-    background-color: grey;
+span.colorG{
+    background-color: rgb(189, 246, 180);
     border: 1px solid black;
-    color: grey;
+    color: rgb(189, 246, 180);
     padding: 10px 10px;
     margin: 10px 10px 10px 10px;
     text-align: center;
@@ -110,10 +110,10 @@ span.colorGrey{
     font-size: 16px;
 }
 
-span.colorBlack{
-    background-color: black;
+span.colorP{
+    background-color: rgb(241, 138, 250);
     border: 1px solid black;
-    color: black;
+    color: rgb(241, 138, 250);
     padding: 10px 10px;
     margin: 10px 10px 10px 10px;
     text-align: center;

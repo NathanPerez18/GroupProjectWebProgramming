@@ -80,6 +80,9 @@ if(!empty($_POST)){
     </div>
 
     <div class="footerBar">
+    <div class="insideFooterTitle">
+                <h2>Find Page</h2>
+        </div>
         <div class="insideFooter">
         <p><a href="index.php">Home</a></p>
         <p><a href="login.php">Login</a></p>

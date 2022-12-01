@@ -128,9 +128,4 @@ span.colorBlack{
     width: 300px;
 }
 
-/*the division block for the footer at the bottom of the page*/
-.footerBar {
-    height: 10vh;
-    width: 100%;
-    border: 5px;
-}
+

@@ -74,14 +74,12 @@
     <br>
     <div class="decorate1"></div>
     <br>
-    <!-- <hr>
-    <div class="reviewBox">
-    <h3>Reviews</h3>
-    <p><strong>0/10</strong><br>I ordered a chair and it didn't have back legs >:C </p>
 
-    </div> -->
 
     <div class="footerBar">
+    <div class="insideFooterTitle">
+                <h2>Find Page</h2>
+        </div>
         <div class="insideFooter">
         <p><a href="index.php">Home</a></p>
         <p><a href="login.php">Login</a></p>

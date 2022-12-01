@@ -102,9 +102,9 @@
                 <!--options to change the material color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorUpholstery" id="mwhite" value="0" onclick="materialColor('mwhite')" checked><span class="colorWhite">color</span>
-                    <input type="radio" name="colorUpholstery" id="mgrey" value="1" onclick="materialColor('mgrey')"><span class="colorGrey">color</span>
-                    <input type="radio" name="colorUpholstery" id="mblack" value="2" onclick="materialColor('mblack')"><span class="colorBlack">color</span>
+                    <input type="radio" name="colorUpholstery" id="mB" value="0" onclick="materialColor('mB')" checked><span class="colorB">color</span>
+                    <input type="radio" name="colorUpholstery" id="mG" value="1" onclick="materialColor('mG')"><span class="colorG">color</span>
+                    <input type="radio" name="colorUpholstery" id="mP" value="2" onclick="materialColor('mP')"><span class="colorP">color</span>
                 </p>
 
                 <!--options to change the legs of the chair-->
@@ -113,16 +113,16 @@
                     <select name="legs" onchange="legType(this.value);">
                         <option name="legs" id="shortLegs" value="0" selected=selected>Short</option>
                         <option name="legs" id="longLegs" value="1" >Long</option>
-                        <option name="legs" id="wheel" value="2" >Wheels</option>
+                        <option name="legs" id="single" value="2" >Single</option>
                     </select>
                 </p>
 
                 <!--options to change the leg color-->
                 <p>
                     <label>Color<br></label>
-                    <input type="radio" name="colorLegs" id="lwhite" value="0" onclick="legColor('lwhite')" checked><span class="colorWhite">color</span>
-                    <input type="radio" name="colorLegs" id="lgrey" value="1" onclick="legColor('lgrey')"><span class="colorGrey">color</span>
-                    <input type="radio" name="colorLegs" id="lblack" value="2" onclick="legColor('lblack')"><span class="colorBlack">color</span>
+                    <input type="radio" name="colorLegs" id="lB" value="0" onclick="legColor('lB')" checked><span class="colorB">color</span>
+                    <input type="radio" name="colorLegs" id="lG" value="1" onclick="legColor('lG')"><span class="colorG">color</span>
+                    <input type="radio" name="colorLegs" id="lP" value="2" onclick="legColor('lP')"><span class="colorP">color</span>
                 </p>
 
             </form>
@@ -140,6 +140,9 @@
 
     <!--pretend contact info for aesthetic purposes-->
     <div class="footerBar">
+    <div class="insideFooterTitle">
+                <h2>Find Page</h2>
+        </div>
         <div class="insideFooter">
         <p><a href="index.php">Home</a></p>
         <p><a href="login.php">Login</a></p>
