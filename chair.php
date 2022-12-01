@@ -1,6 +1,19 @@
 ﻿<?php
-   // include 'dchair.php';
+    include 'dchair.php';
     session_start();
+
+    $chair = new chair();
+
+    if(!empty($_SESSION["uid"])){
+        $chair->pullSaveNames();
+    }
+
+    if(array_key_exists('saveButton', $_POST)){
+        $chair->createSave();
+    }
+    if(array_key_exists('savedTable', $_POST)){
+        $chair->fetchSave();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +62,7 @@
         <form method="POST">
             <button type="button" class="createChair" onclick="resetClick('designC')">Reset to New Design</button>
        
-            <input type="submit" class="saveChair" onclick="saveClick()" value = "Save Design"></input>
+            <input type="submit" name="saveButton" class="saveChair" form="designC" onclick="saveClick()" value = "Save Design"></input>
         </form>
 
         <br>
@@ -58,8 +71,7 @@
 
         <!--dropdown menu for the user's previously saved designs-->
         <select name="savedChair" class="savedMenu">
-            <option>First_save</option>
-            <option>Second_save</option>
+            <option>Previous saves</option>
         </select>
 
         <!--box where the changing image of the chair should be,
