@@ -89,24 +89,21 @@ function resetClick(name) {
 
 function saveClick() {
     let name = prompt("Name your design: ");
-    document.cookie = "saveCookie=" + name+"; SameSite=None; Secure";
-    //console.log(document.cookie);
+    let cleanName = name.replaceAll(" ","");
+    document.cookie = "saveCookie=" + cleanName+"; SameSite=None; Secure";
 }
 
 
 function updateDropdown() {
-    console.log(clicked);
+
     if (!clicked) {
         clicked = true;
 
         for (let i = 0; i < document.cookie.split("; ").length; i++) {
             var cookieValue = document.cookie.split("; ");
 
-            //console.log(cookieValue[i]);
-
             var name = cookieValue[i].split("=");
             if (name[0].includes("nameOfSave")) {
-                //console.log(name[1]);
 
                 var option = document.createElement('option');
                 option.text = option.value = name[1];
@@ -117,12 +114,23 @@ function updateDropdown() {
     }
 }
 function updateDisplay() {
-    alert("DOuble call Worked");
+
+    var options = new Array();
+    for (let i = 0; i < document.cookie.split("; ").length; i++) {
+        var cookieValue = document.cookie.split("; ");
+        var name = cookieValue[i].split("=");
+        if (name[0].includes("formContent")) {
+
+            options.push(name[1]);
+            console.log(name[1]);
+
+        }
+
+    }
+    /*
+    topType(options[0]);
+    topColor(options[1]);
+    tLegType(options[2]);
+    tLegColor(options[3]);
+    */
 }
-
-// function saveChair(){
-//     var chairSave = new Array=[material, mcolor, legs, lcolor];
-//     var nameOfSave = "name";
-// }
-
-// images names 00 01 02 10 11 12 
