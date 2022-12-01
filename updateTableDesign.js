@@ -13,9 +13,9 @@ let tableTPic = ["B_SquareTable.png", "B_CircleTable.png", "B_SlatedTable.png",
 // 3  3 4 5
 // 6  6 7 8
 
-let tableBPic = ["onelegtable.png", "onecolunm4leg.png", "wheelLegsInCenter.png", 
-    "onelegtable.png", "onecolunm4leg.png", "wheelLegsInCenter.png",
-    "onelegtable.png", "onecolunm4leg.png", "wheelLegsInCenter.png"];
+let tableBPic = ["B_OneLeg.png", "B_OneColunm4Leg.png", "B_Wheels.png", 
+    "G_OneLeg.png", "G_OneColunm4Leg.png", "G_Wheels.png",
+    "P_OneLeg.png", "P_OneColunm4Leg.png", "P_Wheels.png"];
 
 // materialImages[0][0]="testTable1.jpg";
 // materialImages[0][1]="testTable2.jpg";
