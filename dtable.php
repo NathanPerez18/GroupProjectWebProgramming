@@ -35,7 +35,9 @@ class dtable extends config{
 
             echo $saveName ."\n";
 
-            $sql = "SELECT * FROM tableoftables WHERE nameOfSave = '$saveName'";
+            $id = $_SESSION["uid"];
+
+            $sql = "SELECT * FROM tableoftables WHERE nameOfSave = '$saveName' AND id = '$id'";
             $result = $connection->query($sql);
 
             $connection->close();
