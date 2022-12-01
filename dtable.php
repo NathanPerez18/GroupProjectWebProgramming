@@ -15,7 +15,7 @@ class dtable extends config{
         $connection->close();
 
         if($result->num_rows == 0){
-            $this->saves[0] = "No Saves Found";
+            $this->saves[0] = "NoSavesFound";
         }else{
             $check = 0;
             while ($temp = mysqli_fetch_assoc($result)){
@@ -24,14 +24,16 @@ class dtable extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i]);
+            setcookie("nameOfSave".$i,$this->saves[$i],time()+60);
         }
     }
 
     public function fetchSave(){
-        if($_POST['savedTable'] != "NoSavesFound" && $_POST['savedTable'] != '*TO BE FILLED IN*'){
+        if($_POST['savedTable'] != "NoSavesFound" && $_POST['savedTable'] != 'Previous saves'){
             $saveName = $_POST['savedTable'];
             $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
+
+            echo $saveName ."\n";
 
             $sql = "SELECT * FROM tableoftables WHERE nameOfSave = '$saveName'";
             $result = $connection->query($sql);
@@ -40,13 +42,21 @@ class dtable extends config{
 
             $formContent = $result->fetch_assoc();
             
-            setcookie('formContent', json_encode($formContent), time()+2);
+            echo $formContent['top'];
+            echo $formContent['topColor'];
+            echo $formContent['legs'];
+            echo $formContent['legColor'];
+
+            setcookie('formContent1', $formContent['top'] , time()+30);
+            setcookie('formContent2', $formContent['topColor'] , time()+30);
+            setcookie('formContent3', $formContent['legs'] , time()+30);
+            setcookie('formContent4', $formContent['legColor'] , time()+30);
         }
     }
 
-    public function toDrop(){
+   /* public function toDrop(){
         setcookie('tableSaves', json_encode($this->saves));
-    }
+    }*/
 
     public function createSave(){
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);

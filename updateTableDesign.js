@@ -102,11 +102,11 @@ function updateDropdown() {
         for (let i = 0; i < document.cookie.split("; ").length; i++) {
             var cookieValue = document.cookie.split("; ");
 
-            console.log(cookieValue[i]);
+            //console.log(cookieValue[i]);
 
             var name = cookieValue[i].split("=");
             if (name[0].includes("nameOfSave")) {
-                console.log(name[1]);
+                //console.log(name[1]);
 
                 var option = document.createElement('option');
                 option.text = option.value = name[1];
@@ -115,6 +115,9 @@ function updateDropdown() {
             }
         }
     }
+}
+function updateDisplay() {
+    alert("DOuble call Worked");
 }
 
 // function saveChair(){

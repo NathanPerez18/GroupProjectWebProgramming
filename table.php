@@ -11,6 +11,9 @@
     if(array_key_exists('saveButton', $_POST)){
         $table->createSave();
     }
+    if(array_key_exists('savedTable', $_POST)){
+        $table->fetchSave();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -68,11 +71,8 @@
         <!--dropdown menu for the user's previously saved designs-->
         <form method="POST">
             <!-- add: onchange='if(this.value != 0) {this.form.submit();}' -->
-            <select name="savedTable" class="savedMenu" onclick= "updateDropdown()" id="saveDropdown">
-                <option selected=selected>Previous saves</option>
-                <?php
-                    $table->toDrop();
-                ?>
+            <select name="savedTable" class="savedMenu" onchange="this.form.submit(); updateDisplay()" onclick= "updateDropdown()" id="saveDropdown">
+                <option>Previous saves</option>
             </select>
         </form>
 
