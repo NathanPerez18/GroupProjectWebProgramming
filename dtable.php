@@ -23,9 +23,7 @@ class dtable extends config{
                 $check += 1;
             }
         }
-       //php echo test function
         for($i = 0; $i< sizeof($this->saves); $i++){
-            echo $this->saves[$i];
             setcookie("nameOfSave".$i,$this->saves[$i]);
         }
     }
