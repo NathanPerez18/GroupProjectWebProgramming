@@ -128,3 +128,9 @@ h3{
     width: 350px;
     height: 305px;
 }
+
+.savedDesigns{
+    padding: 100px;
+    line-height: 30px;
+    text-align: center;
+}

@@ -51,7 +51,7 @@
 
         <div class="bodyContainer" id="mainPage">
             <!--Place Holder image for table-->
-            <img src="https://images.vexels.com/media/users/3/192849/isolated/lists/e626a584464b1e532662560df286fa10-round-classic-side-table-silhouette-perspective.png">
+            <img src="IndexTableButton.png" style="width:250px; height:250px; padding: 5px;">
             <h3></h3>
             <!--refrence is to Tables webpage-->
             <a href="table.php" class="button">
@@ -61,7 +61,7 @@
 
         <div class="bodyContainer">
             <!--Place Holder image for chair-->
-            <img src="https://images.vexels.com/media/users/3/189271/isolated/lists/d91d870be0001128a3a7513059578553-office-ergonomic-chair-silhouette.png">
+            <img src="IndexChairButton.png" style="width:250px; height: 250px; padding: 5px;">
             <h3></h3>
             <!--refrence is to Chairs webpage-->
             <a href="chair.php" class="button">
@@ -74,6 +74,13 @@
     <br>
     <div class="decorate1"></div>
     <br>
+
+    <div class="savedDesigns">
+        <!--division for previously saved designs--> 
+        <h3>View Designs from other users!</h3>
+        <img src="SavedDesignPlaceholderImage.png">
+
+    </div>
 
 
     <div class="footerBar">
