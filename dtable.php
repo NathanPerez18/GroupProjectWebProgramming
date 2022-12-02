@@ -22,7 +22,7 @@ class dtable extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*5);
+            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*1);
         }
     }
 

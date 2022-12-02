@@ -83,8 +83,6 @@ function resetClick(name) {
     bcolor=0;
     callImage("tableT");
     callImage("tableB");
-
-    clicked = false;
  }
 
 function saveClick() {
