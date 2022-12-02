@@ -129,8 +129,8 @@ function updateDisplay() {
     for (let j = 0; j < options.length; j++) {
         console.log(options[j]);
     }
-    var topPic = Number(options[0]) + Number(options[1]);
-    var botPic = Number(options[2]) + Number(options[3]);
+    var topPic = Number(options[0]) + Number(options[1]*3);
+    var botPic = Number(options[2]) + Number(options[3]*3);
 
     console.log(topPic);
     console.log(botPic);

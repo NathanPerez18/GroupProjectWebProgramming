@@ -11,9 +11,7 @@ class dtable extends config{
         
         $sql = "SELECT nameOfSave FROM tableoftables WHERE id = '$id'";
         $result = $connection->query($sql);
-
         $connection->close();
-
         if($result->num_rows == 0){
             $this->saves[0] = "NoSavesFound";
         }else{
@@ -24,15 +22,15 @@ class dtable extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*2);
+            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*5);
         }
     }
 
     public function fetchSave(){
+        echo "Did we make it here";
         if($_POST['savedTable'] != "NoSavesFound" && $_POST['savedTable'] != 'Previous saves'){
             $saveName = $_POST['savedTable'];
             $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
-
             $id = $_SESSION["uid"];
 
             $sql = "SELECT * FROM tableoftables WHERE nameOfSave = '$saveName' AND id = '$id'";
