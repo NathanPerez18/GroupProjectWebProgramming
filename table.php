@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="table.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 <body onload="resetClick('designT')">
@@ -41,7 +42,6 @@
                 echo "<h3 style='padding-right: 25px;'> Welcome, User</h3>";
             }
         ?>
-        <!-- <h3 style="padding-right: 6px;"> Welcome, User!!</h3> -->
     </div>
 
     <div class="navBar">
@@ -67,14 +67,14 @@
         <br>
         <br>
         <br>
-
         <!--dropdown menu for the user's previously saved designs-->
-        <form method="POST">
-            <!-- add: onchange='if(this.value != 0) {this.form.submit();}' -->
+        <form method="POST" id="saveForm">
             <select name="savedTable" class="savedMenu" onchange="this.form.submit(); updateDisplay()" onclick= "updateDropdown()" id="saveDropdown">
                 <option>Previous saves</option>
             </select>
+
         </form>
+
 
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
@@ -104,8 +104,8 @@
                 <!--options to change the table top-->
                 <p>
                     <label>Change Table Top<br></label>
-                    <select name="tabletop" onchange="topType(this.value);">
-                        <option id="square" value=0 selected=selected>Square</option>
+                    <select id="topShape"name="tabletop" onchange="topType(this.value);">
+                        <option id="square" value=0 >Square</option>
                         <option id="circle" value=1 >Circle</option>
                         <option id="slats" value=2 >Slatted</option>
                     </select>
@@ -122,8 +122,8 @@
                 <!--options to change the legs of the table-->
                 <p>
                     <label>Change Legs<br></label>
-                    <select name="Tlegs" onchange="tLegType(this.value);">
-                        <option id="round" value="0" selected=selected>Round</option>
+                    <select id ="legShape"name="Tlegs" onchange="tLegType(this.value);">
+                        <option id="round" value="0" >Round</option>
                         <option id="crossed" value="1">Crossed</option>
                         <option id="wheel" value="2">Wheels</option>
                     </select>

@@ -24,7 +24,7 @@ class dtable extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i],time()+60);
+            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*2);
         }
     }
 
@@ -32,8 +32,6 @@ class dtable extends config{
         if($_POST['savedTable'] != "NoSavesFound" && $_POST['savedTable'] != 'Previous saves'){
             $saveName = $_POST['savedTable'];
             $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
-
-            echo $saveName ."\n";
 
             $id = $_SESSION["uid"];
 
@@ -43,11 +41,6 @@ class dtable extends config{
             $connection->close();
 
             $formContent = $result->fetch_assoc();
-            
-            echo $formContent['top'];
-            echo $formContent['topColor'];
-            echo $formContent['legs'];
-            echo $formContent['legColor'];
 
             setcookie('formContent1', $formContent['top'] , time()+30);
             setcookie('formContent2', $formContent['topColor'] , time()+30);
@@ -55,10 +48,6 @@ class dtable extends config{
             setcookie('formContent4', $formContent['legColor'] , time()+30);
         }
     }
-
-   /* public function toDrop(){
-        setcookie('tableSaves', json_encode($this->saves));
-    }*/
 
     public function createSave(){
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);

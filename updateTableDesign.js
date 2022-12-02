@@ -121,16 +121,49 @@ function updateDisplay() {
         var name = cookieValue[i].split("=");
         if (name[0].includes("formContent")) {
 
-            options.push(name[1]);
-            console.log(name[1]);
+            options.push(name[1]);  
 
         }
 
     }
-    /*
-    topType(options[0]);
-    topColor(options[1]);
-    tLegType(options[2]);
-    tLegColor(options[3]);
-    */
+    for (let j = 0; j < options.length; j++) {
+        console.log(options[j]);
+    }
+    var topPic = Number(options[0]) + Number(options[1]);
+    var botPic = Number(options[2]) + Number(options[3]);
+
+    console.log(topPic);
+    console.log(botPic);
+
+    document.getElementById('tableT').src = tableTPic[topPic];
+    document.getElementById('tableB').src = tableBPic[botPic];
+
+
+    document.getElementById('topShape').selectedIndex = Number(options[0]);
+
+    switch (Number(options[1])){
+        case 0:
+            document.getElementById('twhite').checked = true;
+            break;
+        case 1:
+            document.getElementById('tgrey').checked = true;
+            break;
+        case 2:
+            document.getElementById('tblack').checked = true;
+            break;
+    }
+
+    document.getElementById('legShape').selectedIndex = Number(options[2]);
+
+    switch (Number(options[3])) {
+        case 0:
+            document.getElementById('bwhite').checked = true;
+            break;
+        case 1:
+            document.getElementById('bgrey').checked = true;
+            break;
+        case 2:
+            document.getElementById('bblack').checked = true;
+            break;
+    }
 }
