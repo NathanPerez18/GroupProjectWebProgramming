@@ -57,7 +57,7 @@
 
         <!--two buttons at the top: reset or save-->
 
-        <form method="POST">
+        <form method="POST" style="padding-left:30px">
             <button type="button" class="createTable" onclick="resetClick('designT')">Reset to New Design</button>
             <input type="submit" name="saveButton" form="designT" class="saveTable" value="Save Design" onclick="saveClick()"></input>
         </form>
@@ -65,7 +65,7 @@
         <br>
         <br>
         <!--dropdown menu for the user's previously saved designs-->
-        <form method="POST" id="saveForm">
+        <form method="POST" id="saveForm" style="padding-left:30px">
             <select name="savedTable" class="savedMenu" onclick= "updateDropdown()" id="saveDropdown">
                 <option>Previous saves</option>
             </select>

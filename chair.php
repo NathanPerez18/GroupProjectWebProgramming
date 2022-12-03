@@ -60,7 +60,7 @@
     <div class="mainContainer">
 
         <!--three buttons at the top: create reset or save-->
-        <form method="POST">
+        <form method="POST" style="padding-left:30px">
             <button type="button" class="createChair" onclick="resetClick('designC')">Reset to New Design</button>
        
             <input type="submit" name="saveButton" class="saveChair" form="designC" onclick="saveClick()" value = "Save Design"></input>
@@ -71,7 +71,7 @@
         <br>
 
         <!--dropdown menu for the user's previously saved designs-->
-        <form method="POST" id="saveForm">
+        <form method="POST" id="saveForm" style="padding-left:30px">
             <select name="savedChair" class="savedMenu" id="saveDropdown" onclick="updateDropdown()">
                 <option>Previous saves</option>
             </select>

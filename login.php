@@ -69,12 +69,9 @@ if(!empty($_POST)){
 
             <div class="bodyContainer" style="background-color: #f1f1f1; border-radius: 2%;">
                 <a href="index.php"><button type="button" class="cancelbtn" >Cancel</button></a>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                <span class="psw" style="padding-top: 6px;">Don't Have an Account? <a href="createAccount.php">Create One!</a></span>
             </div>
 
-            <div class="bodyContainer">
-                <span class="psw" style="padding-top: 3px;">Don't Have an Account? <a href="createAccount.php">Create One!</a></span>
-            </div>
         </form>
 
     </div>
