@@ -87,8 +87,10 @@ function resetClick(name) {
 
 function saveClick() {
     let name = prompt("Name your design: ");
-    let cleanName = name.replaceAll(" ","");
-    document.cookie = "saveCookie=" + cleanName+"; SameSite=None; Secure";
+    let cleanName = name.replaceAll(" ", "");
+    if (name != null) {
+        document.cookie = "saveCookie=" + cleanName + "; SameSite=None; Secure";
+    }
 }
 
 
@@ -124,18 +126,11 @@ function updateDisplay() {
         }
 
     }
-    for (let j = 0; j < options.length; j++) {
-        console.log(options[j]);
-    }
     var topPic = Number(options[0]) + Number(options[1]*3);
     var botPic = Number(options[2]) + Number(options[3]*3);
 
-    console.log(topPic);
-    console.log(botPic);
-
     document.getElementById('tableT').src = tableTPic[topPic];
     document.getElementById('tableB').src = tableBPic[botPic];
-
 
     document.getElementById('topShape').selectedIndex = Number(options[0]);
 

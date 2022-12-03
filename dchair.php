@@ -23,7 +23,7 @@ class chair extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i],time()+60);
+            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*2);
         }
     }
 
@@ -32,7 +32,6 @@ class chair extends config{
             $saveName = $_POST['savedTable'];
             $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
 
-            echo $saveName ."\n";
 
 			$id = $_SESSION["uid"];
 
@@ -42,22 +41,15 @@ class chair extends config{
             $connection->close();
 
             $formContent = $result->fetch_assoc();
-            
-            echo $formContent['material'];
-            echo $formContent['colorUpholstery'];
-            echo $formContent['legs'];
-            echo $formContent['colorLegs'];
+         
 
             setcookie('formContent1', $formContent['material'] , time()+30);
-            setcookie('formContent2', $formContent['colorUpholstery'] , time()+30);
+            setcookie('formContent2', $formContent['materialColor'] , time()+30);
             setcookie('formContent3', $formContent['legs'] , time()+30);
-            setcookie('formContent4', $formContent['colorLegs'] , time()+30);
+            setcookie('formContent4', $formContent['legColor'] , time()+30);
         }
     }
 
-   /* public function toDrop(){
-        setcookie('tableSaves', json_encode($this->saves));
-    }*/
 
     public function createSave(){
         $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);

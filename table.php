@@ -11,10 +11,6 @@
     if(array_key_exists('saveButton', $_POST)){
         $table->createSave();
     }
-   /* if(array_key_exists('savedTable', $_POST)){
-        $table->fetchSave();
-    }*/
-
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +66,7 @@
         <br>
         <!--dropdown menu for the user's previously saved designs-->
         <form method="POST" id="saveForm">
-            <select name="savedTable" class="savedMenu" onchange="" onclick= "updateDropdown()" id="saveDropdown">
+            <select name="savedTable" class="savedMenu" onclick= "updateDropdown()" id="saveDropdown">
                 <option>Previous saves</option>
             </select>
 
@@ -168,15 +164,11 @@ $(function() {
         pair = pair.split("=");
         let a = pair[1];
         
-        
 	$.ajax({ 
-		'url':'fetchSave.php', 
+		'url':'fetchSaveT.php', 
 		'type':'POST', 
 		'data': {'savedTable':a}, 
 		'success':function(e) { 
-            console.log(e);
-            console.log({"savedTable":a});
-			console.log("POST SUCESSS");
             updateDisplay();
 		} 
 	}); 

@@ -27,7 +27,6 @@ class dtable extends config{
     }
 
     public function fetchSave(){
-        echo "Did we make it here";
         if($_POST['savedTable'] != "NoSavesFound" && $_POST['savedTable'] != 'Previous saves'){
             $saveName = $_POST['savedTable'];
             $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);

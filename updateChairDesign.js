@@ -3,6 +3,8 @@ var material=0;
 var legs=0;
 var lcolor=0;
 
+let clicked = false;
+
 let matPic = ["B_PlasticChair.png", "B_FabricChair.png", "B_MetalChair.png",
     "G_PlasticChair.png", "G_FabricChair.png", "G_MetalChair.png",
     "P_PlasticChair.png", "P_FabricChair.png", "P_MetalChair.png"];
@@ -84,14 +86,75 @@ function resetClick(name) {
  }
 
 
- function saveClick(){
-    let name= prompt("Name your design: ");
-     document.cookie = "saveCookie=" + name;
-     console.log(document.cookie);
+function saveClick() {
+    let name = prompt("Name your design: ");
+    let cleanName = name.replaceAll(" ", "");
+    if (name != null) {
+        document.cookie = "saveCookie=" + cleanName + "; SameSite=None; Secure";
+    }
 }
-// function saveChair(){
-//     var chairSave = new Array=[material, mcolor, legs, lcolor];
-//     var nameOfSave = "name";
-// }
+function updateDropdown() {
 
-// images names 00 01 02 10 11 12 
+    if (!clicked) {
+        clicked = true;
+
+        for (let i = 0; i < document.cookie.split("; ").length; i++) {
+            var cookieValue = document.cookie.split("; ");
+
+            var name = cookieValue[i].split("=");
+            if (name[0].includes("nameOfSave")) {
+
+                var option = document.createElement('option');
+                option.text = option.value = name[1];
+                document.getElementById("saveDropdown").appendChild(option);
+
+            }
+        }
+    }
+}
+function updateDisplay() {
+    var options = new Array();
+    for (let i = 0; i < document.cookie.split("; ").length; i++) {
+        var cookieValue = document.cookie.split("; ");
+        var name = cookieValue[i].split("=");
+        if (name[0].includes("formContent")) {
+
+            options.push(name[1]);
+
+        }
+
+    }
+    var topPic = Number(options[0]) + Number(options[1] * 3);
+    var botPic = Number(options[2]) + Number(options[3] * 3);
+
+    document.getElementById('chairM').src = matPic[topPic];
+    document.getElementById('chairL').src = legPic[botPic];
+
+    document.getElementById('topMat').selectedIndex = Number(options[0]);
+
+    switch (Number(options[1])) {
+        case 0:
+            document.getElementById('mB').checked = true;
+            break;
+        case 1:
+            document.getElementById('mG').checked = true;
+            break;
+        case 2:
+            document.getElementById('mP').checked = true;
+            break;
+    }
+
+    document.getElementById('legShape').selectedIndex = Number(options[2]);
+
+    switch (Number(options[3])) {
+        case 0:
+            document.getElementById('lB').checked = true;
+            break;
+        case 1:
+            document.getElementById('lG').checked = true;
+            break;
+        case 2:
+            document.getElementById('lP').checked = true;
+            break;
+    }
+}

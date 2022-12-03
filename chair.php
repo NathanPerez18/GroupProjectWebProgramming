@@ -11,9 +11,9 @@
     if(array_key_exists('saveButton', $_POST)){
         $chair->createSave();
     }
-    if(array_key_exists('savedTable', $_POST)){
+   /* if(array_key_exists('savedTable', $_POST)){
         $chair->fetchSave();
-    }
+    }*/
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="chair.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 <body onload="resetClick('designC')">
@@ -70,10 +71,11 @@
         <br>
 
         <!--dropdown menu for the user's previously saved designs-->
-        <select name="savedChair" class="savedMenu">
-            <option>Previous saves</option>
-        </select>
-
+        <form method="POST" id="saveForm">
+            <select name="savedChair" class="savedMenu" id="saveDropdown" onclick="updateDropdown()">
+                <option>Previous saves</option>
+            </select>
+        </form>
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="chairDesigning">
@@ -103,7 +105,7 @@
                 <!--options to change the material of the chair-->
                 <p>
                     <label>Change Material<br></label>
-                    <select name="material" onchange="materialType(this.value);"><!--onChange="materialType(this.value)"-->
+                    <select id="topMat" name="material" onchange="materialType(this.value);"><!--onChange="materialType(this.value)"-->
                         <option id="plastic" value="0" selected=selected>Plastic</option>
                         <option id="fabric" value="1" >Fabric</option>
                         <option id="metal" value="2" >Metal</option>
@@ -122,7 +124,7 @@
                 <!--options to change the legs of the chair-->
                 <p>
                     <label>Change Legs<br></label>
-                    <select name="legs" onchange="legType(this.value);">
+                    <select id="legShape" name="legs" onchange="legType(this.value);">
                         <option name="legs" id="shortLegs" value="0" selected=selected>Short</option>
                         <option name="legs" id="longLegs" value="1" >Long</option>
                         <option name="legs" id="single" value="2" >Single</option>
@@ -163,6 +165,24 @@
         <p>Copyright LRNJ 2022<span>&copy;</span></p>
         </div>
     </div>
-
+<script>
+$(function() { 
+	$("#saveForm").change(function() { 
+        var pair = $("#saveForm").serialize();
+        pair = pair.split("=");
+        let a = pair[1];
+        
+	$.ajax({ 
+		'url':'fetchSaveC.php', 
+		'type':'POST', 
+		'data': {'savedTable':a}, 
+		'success':function(e) { 
+            updateDisplay();
+		} 
+	}); 
+	return false; 
+	}); 
+}); 
+</script>
 </body>
 </html>
