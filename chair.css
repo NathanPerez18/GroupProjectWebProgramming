@@ -133,7 +133,5 @@ span.colorP{
 }
 
 .dropdown{
-    width: 600px;
-    height: 50px;
-    margin: auto;
+ text-align: center;
 }
