@@ -102,7 +102,7 @@ function updateDropdown() {
             var cookieValue = document.cookie.split("; ");
 
             var name = cookieValue[i].split("=");
-            if (name[0].includes("nameOfSave")) {
+            if (name[0].includes("chairCookie")) {
 
                 var option = document.createElement('option');
                 option.text = option.value = name[1];
@@ -117,7 +117,7 @@ function updateDisplay() {
     for (let i = 0; i < document.cookie.split("; ").length; i++) {
         var cookieValue = document.cookie.split("; ");
         var name = cookieValue[i].split("=");
-        if (name[0].includes("formContent")) {
+        if (name[0].includes("formContentChair")) {
 
             options.push(name[1]);
 

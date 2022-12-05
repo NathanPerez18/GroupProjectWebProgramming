@@ -24,7 +24,7 @@ class dtable extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*1);
+            setcookie("tableCookie".$i,$this->saves[$i],time()+60*5);
         }
     }
 
@@ -41,10 +41,10 @@ class dtable extends config{
 
             $formContent = $result->fetch_assoc();
 
-            setcookie('formContent1', $formContent['top'] , time()+30);
-            setcookie('formContent2', $formContent['topColor'] , time()+30);
-            setcookie('formContent3', $formContent['legs'] , time()+30);
-            setcookie('formContent4', $formContent['legColor'] , time()+30);
+            setcookie('formContentTable1', $formContent['top'] , time()+30);
+            setcookie('formContentTable2', $formContent['topColor'] , time()+30);
+            setcookie('formContentTable3', $formContent['legs'] , time()+30);
+            setcookie('formContentTable4', $formContent['legColor'] , time()+30);
         }
     }
 
