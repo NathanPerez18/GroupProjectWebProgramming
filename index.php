@@ -75,23 +75,9 @@
     <div class="decorate1"></div>
     <br>
 
-    <script>
-        function Image(identify){
-            if(identify=="T"){
-            document.getElementById(identify).src = tableTPic[5];
-            console.log(tableTPic[5]);
-            console.log(6);
-            }
-            if(identify=="B"){
-            document.getElementById(identify).src = tableBPic[4];
-            console.log(tableBPic[4]);
-            }
 
-
-        }
-    </script>
     <div class="viewSaved"style="text-align:center;">
-        <h3>View Designs from other users!</h3>
+        <h3>View Possible Designs:</h3>
     </div>
 
     <div class="savedDesigns">
@@ -109,18 +95,33 @@
         "G_OneLeg.png", "G_OneColunm4Leg.png", "G_Wheels.png",
         "P_OneLeg.png", "P_OneColunm4Leg.png", "P_Wheels.png"];
 
-        //initializes variables for the top and bottom images
-        $topImage = $tableTPic[1];
-        $bottomImage = $tableBPic[4];
+        $matPic = ["B_PlasticChair.png", "B_FabricChair.png", "B_MetalChair.png",
+        "G_PlasticChair.png", "G_FabricChair.png", "G_MetalChair.png",
+        "P_PlasticChair.png", "P_FabricChair.png", "P_MetalChair.png"];
+        
+        $legPic = ["B_ShortChairLegs.png", "B_longChairLegs.png", "B_OneLeg.png", 
+        "G_ShortChairLegs.png", "G_longChairLegs.png", "G_OneLeg.png",
+        "P_ShortChairLegs.png", "P_longChairLegs.png", "P_OneLeg.png"];
 
 
         ?>
 
-        <?php $count=0; while($count<4){ ?>
+        <?php $count=0; while($count<4){ 
+            $topImage = $tableTPic[$count+3];
+            $bottomImage = $tableBPic[$count+2];?>
         <div class="innerSavedDesigns" >
             <img src="<?php echo $topImage?>" style="width:520px; height:260px;"><!--top image-->
             
             <img  src="<?php echo $bottomImage?>" style="width:520px; height:260px;"><!--bottom image-->
+        </div>
+        <?php 
+            $topImage = $matPic[$count+1];
+            $bottomImage = $legPic[$count*2];
+        ?>
+        <div class="innerSavedDesigns">
+        <img src="<?php echo $topImage?>" style="width:520px; height:390px;"><!--top image-->
+            
+            <img  src="<?php echo $bottomImage?>" style="width:520px; height:130px;"><!--bottom image-->
         </div>
         <?php $count++; } ?>
 
