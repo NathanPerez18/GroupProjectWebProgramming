@@ -1,5 +1,10 @@
+/*
+made by: Group 20- Logan Butler (100828103), Juliano Falotico (100658311),
+            Nathan Perez (100754066), Rivka Sagi (100780926)
+made for: SOFE 2800U Web Programming, Final Project
+made to: Style the chair.php page
+*/
 /* page fonts and background */
-
 body{
     background-color:rgb(208, 255, 245);
     font-family: Century Gothic, Lucida Sans, sans-serif;
@@ -11,12 +16,12 @@ a button{
     font-family: Lucida Sans, sans-serif;
 }
 
+/*All h3 tags*/
 h3{
     letter-spacing: 1px;
 }
 
-/*following three blocks are the three oval shaped buttons at the top 
-of the page*/
+/*Button for resetting to the default design*/
 .createChair{
     background-color: rgb(0, 234, 255);
     border-color:rgb(150, 255, 255);
@@ -24,7 +29,7 @@ of the page*/
     border-radius: 50%;
 }
 
-
+/*Button for saving designs*/
 .saveChair{
     background-color: rgb(57, 255, 50);
     border-color: rgb(140, 253, 102);
@@ -32,7 +37,7 @@ of the page*/
     border-radius: 50%;
 }
 
-/*block where the changing image of the chair should be*/
+/*Design box: contains changing image of the chair*/
 .chairDesigning{
     border-style: ridge;
     width: 520px;
@@ -45,6 +50,7 @@ of the page*/
     background-color: white;
 }
 
+/*Formatting images on page*/
 .image{
     width:520px; 
     height: 260px;
@@ -53,7 +59,7 @@ of the page*/
     margin-left: auto;
 }
 
-/*(main) division container where the changing image of the chair is*/
+/*Main division for the page*/
 .mainContainer {
     height: 80%;
     width: 100%;
@@ -61,7 +67,7 @@ of the page*/
     font-family: Lucida Sans, sans-serif;
 }
 
-/*division for the design options*/
+/*Form for design options*/
 div.chairDesignOptions {
     border-style: ridge none ridge none;
     border-width: 10pt;
@@ -75,17 +81,18 @@ div.chairDesignOptions {
     font-family: Century Gothic, Lucida Sans, sans-serif;
 }
 
-/*the title "Design Options" within the form */
+/*Title of form "Design Options"*/
 div.chairDesignOptions legend{
     font-size: 30pt;
 }
 
-/*the other titles in the form (color, change chair legs, etc.)*/
+/*Labels inside the design options (color, change chair legs, etc.)*/
 div.chairDesignOptions label{
     font-size: 15pt;
     text-decoration: underline;
 }
 
+/*Blue block of color next to radio button*/
 span.colorB{
     background-color: rgb(164, 228, 240);
     border: 1px solid black;
@@ -98,6 +105,7 @@ span.colorB{
     font-size: 16px;
 }
 
+/*Green block of color next to radio button*/
 span.colorG{
     background-color: rgb(189, 246, 180);
     border: 1px solid black;
@@ -110,6 +118,7 @@ span.colorG{
     font-size: 16px;
 }
 
+/*Purple block of color next to radio button*/
 span.colorP{
     background-color: rgb(241, 138, 250);
     border: 1px solid black;
@@ -123,7 +132,7 @@ span.colorP{
 }
 
 
-/*the dropdown near the top of the page with the user's previous designs*/
+/*the dropdown under the design box with the user's previous designs*/
 .savedMenu{
     background-color: rgb(94, 236, 170);
     border-color:rgb(40, 182, 111);
