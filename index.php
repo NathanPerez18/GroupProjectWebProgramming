@@ -113,7 +113,7 @@
         "G_ShortChairLegs.png", "G_longChairLegs.png", "G_OneLeg.png",
         "P_ShortChairLegs.png", "P_longChairLegs.png", "P_OneLeg.png"];
 
-        //Utter shananagains (logan pls help)
+        //Database connection Variables
         $dbhost = "localhost";
         $dbuser = "Admin";
         $dbpass = "1234";
