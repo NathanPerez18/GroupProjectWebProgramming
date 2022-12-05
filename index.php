@@ -75,17 +75,27 @@
     <div class="decorate1"></div>
     <br>
 
+    <script>
+        function Image(identify){
+            if(identify=="T"){
+            document.getElementById(identify).src = tableTPic[5];
+            console.log(tableTPic[5]);
+            console.log(6);
+            }
+            if(identify=="B"){
+            document.getElementById(identify).src = tableBPic[4];
+            console.log(tableBPic[4]);
+            }
 
+
+        }
+    </script>
     <div class="viewSaved"style="text-align:center;">
-        <h3>View Possible Designs:</h3>
+        <h3>View Designs from other users!</h3>
     </div>
 
     <div class="savedDesigns">
-        <!--division for previously saved designs--> 
-
-        <!-- <img src="SavedDesignPlaceholderImage.png"> -->
-
-        <?php 
+      <?php 
         //array from js redone in php
         $tableTPic = ["B_SquareTable.png", "B_CircleTable.png", "B_SlatedTable.png",
         "G_SquareTable.png", "G_CircleTable.png", "G_SlatedTable.png",
@@ -98,30 +108,75 @@
         $matPic = ["B_PlasticChair.png", "B_FabricChair.png", "B_MetalChair.png",
         "G_PlasticChair.png", "G_FabricChair.png", "G_MetalChair.png",
         "P_PlasticChair.png", "P_FabricChair.png", "P_MetalChair.png"];
-        
-        $legPic = ["B_ShortChairLegs.png", "B_longChairLegs.png", "B_OneLeg.png", 
+    
+       $legPic = ["B_ShortChairLegs.png", "B_longChairLegs.png", "B_OneLeg.png", 
         "G_ShortChairLegs.png", "G_longChairLegs.png", "G_OneLeg.png",
         "P_ShortChairLegs.png", "P_longChairLegs.png", "P_OneLeg.png"];
 
-
+        //Utter shananagains (logan pls help)
+        $dbhost = "localhost";
+        $dbuser = "Admin";
+        $dbpass = "1234";
+        $dbname = "admin";
+ 
         ?>
 
-        <?php $count=0; while($count<4){ 
-            $topImage = $tableTPic[$count+3];
-            $bottomImage = $tableBPic[$count+2];?>
+        <?php $count=0; while($count<4){ ?>
         <div class="innerSavedDesigns" >
+        <?php
+
+        //Will randomly chose to pull from either the chair table or the tableoftables table
+        $choice = rand(0,1);
+
+        //Will perform an sql qurey of the table 
+        if($choice==0)
+        {
+            $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+            $sql = "SELECT rand(),top,topColor,legs,legColor FROM tableoftables ORDER BY 1 limit 1";
+            $result = $connection->query($sql);
+            $connection->close();
+
+            //If the table is empty, makes a random picture
+            if($result->num_rows == 0 )
+            {
+                $topImage = $tableTPic[rand(0,8)];
+                $bottomImage = $tableBPic[rand(0,8)];
+            }
+            //When there is a entry in the table
+            else
+            {
+                $temp = mysqli_fetch_assoc($result);
+           
+                $topImage = $tableTPic[$temp['top']+$temp['topColor']*3];
+                $bottomImage = $tableBPic[$temp['legs']+$temp['legColor']*3];
+            }
+        }
+        else
+        {
+          $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+            $sql = "SELECT rand(),material,materialColor,legs,legColor FROM chair ORDER BY 1 limit 1";
+            $result = $connection->query($sql);
+            $connection->close();
+
+            //If the table is empty, makes a random picture
+            if($result->num_rows == 0 )
+            {
+                $topImage = $matPic[rand(0,8)];
+                $bottomImage = $legPic[rand(0,8)];
+            }
+            //When there is a entry in the table
+            else
+            {
+                $temp = mysqli_fetch_assoc($result);
+           
+                $topImage = $matPic[$temp['material']+$temp['materialColor']*3];
+                $bottomImage = $legPic[$temp['legs']+$temp['legColor']*3];
+            }
+        }
+        ?>
             <img src="<?php echo $topImage?>" style="width:520px; height:260px;"><!--top image-->
             
             <img  src="<?php echo $bottomImage?>" style="width:520px; height:260px;"><!--bottom image-->
-        </div>
-        <?php 
-            $topImage = $matPic[$count+1];
-            $bottomImage = $legPic[$count*2];
-        ?>
-        <div class="innerSavedDesigns">
-        <img src="<?php echo $topImage?>" style="width:520px; height:390px;"><!--top image-->
-            
-            <img  src="<?php echo $bottomImage?>" style="width:520px; height:130px;"><!--bottom image-->
         </div>
         <?php $count++; } ?>
 
