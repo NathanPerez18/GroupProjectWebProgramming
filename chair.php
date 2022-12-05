@@ -11,9 +11,6 @@
     if(array_key_exists('saveButton', $_POST)){
         $chair->createSave();
     }
-   /* if(array_key_exists('savedTable', $_POST)){
-        $chair->fetchSave();
-    }*/
 ?>
 
 <!DOCTYPE html>

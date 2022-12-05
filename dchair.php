@@ -23,7 +23,7 @@ class chair extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i],time()+5);
+            setcookie("chairCookie".$i,$this->saves[$i],time()+60*5);
         }
     }
 
@@ -43,10 +43,10 @@ class chair extends config{
             $formContent = $result->fetch_assoc();
          
 
-            setcookie('formContent1', $formContent['material'] , time()+30);
-            setcookie('formContent2', $formContent['materialColor'] , time()+30);
-            setcookie('formContent3', $formContent['legs'] , time()+30);
-            setcookie('formContent4', $formContent['legColor'] , time()+30);
+            setcookie('formContentChair1', $formContent['material'] , time()+30);
+            setcookie('formContentChair2', $formContent['materialColor'] , time()+30);
+            setcookie('formContentChair3', $formContent['legs'] , time()+30);
+            setcookie('formContentChair4', $formContent['legColor'] , time()+30);
         }
     }
 
