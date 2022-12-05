@@ -22,16 +22,18 @@ h3{
 }
 
 img{
-    width: 300pt;
-    height: 200pt;
+    width: 375pt;
+    height: 325pt;
 }
 
 .image{
-    border: 2px inset rgb(22, 20, 18);
-    width: 300pt;
-    height: 200pt;
+    border: 3pt inset rgb(181, 166, 117);
+    width: 375pt;
+    height: 325pt;
     float: left;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .text{
@@ -41,11 +43,13 @@ img{
     overflow: hidden;
     line-height: 25pt;
     color:rgb(22, 20, 18);
+    float: right;
+    padding: 20px;
 }
 .bodyContainer{
     background-color:rgb(255, 255, 235);
-    width: 900pt;
-    height: 200pt;
+    width: 1250px;
+    height: 600px;
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;

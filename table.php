@@ -64,13 +64,13 @@
         <br>
         <br>
         <br>
-        <!--dropdown menu for the user's previously saved designs-->
+        <!-- dropdown menu for the user's previously saved designs
         <form method="POST" id="saveForm" style="padding-left:30px">
             <select name="savedTable" class="savedMenu" onclick= "updateDropdown()" id="saveDropdown">
                 <option>Previous saves</option>
             </select>
 
-        </form>
+        </form> -->
 
 
         <!--box where the changing image of the chair should be,
@@ -82,6 +82,17 @@
 
         </div>
 
+        <br>
+        <br>
+        <!--dropdown menu for the user's previously saved designs-->
+        <div class="dropdown">
+        <form method="POST" id="saveForm" style="padding-left:30px">
+            <select name="savedTable" class="savedMenu" onclick= "updateDropdown()" id="saveDropdown">
+                <option>Previous saves</option>
+            </select>
+
+        </form>
+        </div>
         <br>
         <br>
 

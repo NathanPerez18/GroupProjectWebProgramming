@@ -61,7 +61,26 @@
                         </li>
                     </ul>
                 </p>
-                <p>I can be reached at <a href="#">logan.butler@ontariotechu.net</a> </p>
+                <p>I can be reached at logan.butler@ontariotechu.net </p>
+            </div>
+            <div class="text">
+                <h2>Juliano Falotico: 100658311</h2>
+                <p>
+                    2nd year Software Engineering student at Ontario Tech University<br>
+                    About me:
+                    <ul>
+                        <li>
+                            Favourite color - Red
+                        </li>
+                        <li>
+                            Favourite snack - Chocolate
+                        </li>
+                        <li>
+                            Favourite quote - "I have come here to chew bubblegum and kick a-, and I'm all out of bubble gum" - They Live
+                        </li>
+                    </ul>
+                </p>
+                <p>I can be reached at juliano.falotico@ontariotechu.net </p>
             </div>
         </div>
 
@@ -86,39 +105,9 @@
                         </li>
                     </ul> 
                 </p>
-                <p>I can be reached at <a href="#">nathan.perez@ontariotechu.net</a> </p>
+                <p>I can be reached at nathan.perez@ontariotechu.net </p>
             </div>
-        </div>
-
-        <div class="bodyContainer">
-            <div class="image">
-                <img src="coolDudes.jpg">
-            </div>
-            <div class="text">
-                <h2>Juliano Falotico: 100658311</h2>
-                <p>
-                    2nd year Software Engineering student at Ontario Tech University<br>
-                    About me:
-                    <ul>
-                        <li>
-                            Favourite color - Red
-                        </li>
-                        <li>
-                            Favourite snack - Chocolate
-                        </li>
-                        <li>
-                            Favourite quote - "I have come here to chew bubblegum and kick a-, and I'm all out of bubble gum" - They Live
-                        </li>
-                    </ul>
-                </p>
-                <p>I can be reached at <a href="#">juliano.falotico@ontariotechu.net</a> </p>
-            </div>
-        </div>
-
-        <div class="bodyContainer">
-            <div class="image">
-                <img src = "coolPeeps.png">
-            </div>
+  
             <div class="text">
                 <h2>Rivka Sagi: 100780926</h2>
                 <p>
@@ -137,7 +126,7 @@
                         </li>
                     </ul>
                 </p>
-                <p>I can be reached at <a href="#">rivka.sagi@ontariotechu.net</a> </p>
+                <p>I can be reached at rivka.sagi@ontariotechu.net </p>
             </div>
         </div>
     </div>

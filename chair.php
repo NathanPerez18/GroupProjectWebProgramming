@@ -28,7 +28,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
-<body onload="resetClick('designC')">
+<body>
 
     <script src="updateChairDesign.js"></script>
 
@@ -70,20 +70,32 @@
         <br>
         <br>
 
-        <!--dropdown menu for the user's previously saved designs-->
+        <!-- dropdown menu for the user's previously saved designs
         <form method="POST" id="saveForm" style="padding-left:30px">
             <select name="savedChair" class="savedMenu" id="saveDropdown" onclick="updateDropdown()">
                 <option>Previous saves</option>
             </select>
-        </form>
+        </form> -->
         <!--box where the changing image of the chair should be,
             for now just a placeholder-->
         <div class="chairDesigning">
-            <img id="chairM" src="testTable1.jpg" class ="image" style="height:390px;">
-            <img id="chairL" src="testTable1.jpg" class="image" style="height:130px;">
+            <img id="chairM" src="B_PlasticChair.png" class ="image" style="height:390px;">
+            <img id="chairL" src="B_ShortChairLegs.png" class="image" style="height:130px;">
 
 
             
+        </div>
+
+        <br>
+        <br>
+
+         <!--dropdown menu for the user's previously saved designs-->
+         <div class="dropdown">
+         <form method="POST" id="saveForm" style="padding-left:30px">
+            <select name="savedChair" class="savedMenu" id="saveDropdown" onclick="updateDropdown()">
+                <option>Previous saves</option>
+            </select>
+        </form>
         </div>
 
         <br>
@@ -143,12 +155,7 @@
         </div>
 
 
-        <!--deleted third div because it wasn't necesary -->
-
     </div>
-<!-- 
-    <br>
-    <br> -->
 
 
 

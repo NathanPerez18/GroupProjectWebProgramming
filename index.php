@@ -75,10 +75,54 @@
     <div class="decorate1"></div>
     <br>
 
+    <script>
+        function Image(identify){
+            if(identify=="T"){
+            document.getElementById(identify).src = tableTPic[5];
+            console.log(tableTPic[5]);
+            console.log(6);
+            }
+            if(identify=="B"){
+            document.getElementById(identify).src = tableBPic[4];
+            console.log(tableBPic[4]);
+            }
+
+
+        }
+    </script>
+    <div class="viewSaved"style="text-align:center;">
+        <h3>View Designs from other users!</h3>
+    </div>
+
     <div class="savedDesigns">
         <!--division for previously saved designs--> 
-        <h3>View Designs from other users!</h3>
-        <img src="SavedDesignPlaceholderImage.png">
+
+        <!-- <img src="SavedDesignPlaceholderImage.png"> -->
+
+        <?php 
+        //array from js redone in php
+        $tableTPic = ["B_SquareTable.png", "B_CircleTable.png", "B_SlatedTable.png",
+        "G_SquareTable.png", "G_CircleTable.png", "G_SlatedTable.png",
+        "P_SquareTable.png", "P_CircleTable.png", "P_SlatedTable.png"];
+        
+        $tableBPic = ["B_OneLeg.png", "B_OneColunm4Leg.png", "B_Wheels.png", 
+        "G_OneLeg.png", "G_OneColunm4Leg.png", "G_Wheels.png",
+        "P_OneLeg.png", "P_OneColunm4Leg.png", "P_Wheels.png"];
+
+        //initializes variables for the top and bottom images
+        $topImage = $tableTPic[1];
+        $bottomImage = $tableBPic[4];
+
+
+        ?>
+
+        <?php $count=0; while($count<4){ ?>
+        <div class="innerSavedDesigns" >
+            <img src="<?php echo $topImage?>" style="width:520px; height:260px;"><!--top image-->
+            
+            <img  src="<?php echo $bottomImage?>" style="width:520px; height:260px;"><!--bottom image-->
+        </div>
+        <?php $count++; } ?>
 
     </div>
 

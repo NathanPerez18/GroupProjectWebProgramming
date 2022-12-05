@@ -1,10 +1,5 @@
 body{
     background-color: rgb(233, 243, 247);
-    /* font-family: Century Gothic, Lucida Sans, sans-serif; */
-    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    /* background-image: url("MyKiaLogoCentered.png");
-    background-size: 300px 200px;
-    background-repeat: repeat-x; */
 }
 .mainContainer {
     text-align: center;
@@ -129,8 +124,29 @@ h3{
     height: 305px;
 }
 
+.viewSaved{
+    font-size: 50px;
+    color: rgb(1, 1, 122);
+}
+
 .savedDesigns{
     padding: 100px;
     line-height: 30px;
     text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left:100px;
+    margin-right:100px;
+   
+}
+
+.innerSavedDesigns{
+    width: 520px; 
+    height: 520px; 
+
+    background-color: white; 
+    border: 5px solid black;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+ 
 }
