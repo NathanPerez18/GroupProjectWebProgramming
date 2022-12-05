@@ -167,15 +167,18 @@ $(function() {
         var pair = $("#saveForm").serialize();
         pair = pair.split("=");
         let a = pair[1];
-        
-	$.ajax({ 
-		'url':'fetchSaveC.php', 
-		'type':'POST', 
-		'data': {'savedTable':a}, 
-		'success':function(e) { 
-            updateDisplay();
-		} 
-	}); 
+        if(a=='NoSavesFound' || a=='Previous%20saves'){
+            return;
+        }else{
+	        $.ajax({ 
+		        'url':'fetchSaveC.php', 
+		        'type':'POST', 
+		        'data': {'savedTable':a}, 
+		        'success':function(e) { 
+                    updateDisplay();
+		        } 
+	        });
+        }
 	return false; 
 	}); 
 }); 
