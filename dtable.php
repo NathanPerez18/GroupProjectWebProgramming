@@ -30,7 +30,7 @@ class dtable extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("tableCookie".$i,$this->saves[$i],time()+60*5);
+            setcookie("tableCookie".$i,$this->saves[$i],time()+5);
         }
     }
 

@@ -169,6 +169,13 @@
         </div>
     </div>
 <script>
+//This jquery function reacts to an onChange event from
+//form with ID saveForm. When a change event happens,
+//we serialize the data from the form, check if
+//the data is an actual save name then sends a ajax
+//payload,POST, to the required PHP file with the proper data.
+//if the POST is successful, then jquery will run the 
+//update dropdown function
 $(function() { 
 	$("#saveForm").change(function() { 
         var pair = $("#saveForm").serialize();
