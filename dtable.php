@@ -11,7 +11,9 @@ class dtable extends config{
         
         $sql = "SELECT nameOfSave FROM tableoftables WHERE id = '$id'";
         $result = $connection->query($sql);
+
         $connection->close();
+        
         if($result->num_rows == 0){
             $this->saves[0] = "NoSavesFound";
         }else{
@@ -47,22 +49,28 @@ class dtable extends config{
     }
 
     public function createSave(){
-        $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
-        $name = $_COOKIE['saveCookie'];
+        if(!empty($_SESSION["uid"])){
+            $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
+            $name = $_COOKIE['saveCookie'];
 
-        $sql = "INSERT INTO tableoftables (id, nameOfSave, top, topColor, legs, legColor) VALUES (
-			'{$connection->real_escape_string($_SESSION['uid'])}',
-			'{$connection->real_escape_string($name)}',
-            '{$connection->real_escape_string($_POST['tabletop'])}',
-            '{$connection->real_escape_string($_POST['colorTableTop'])}',
-            '{$connection->real_escape_string($_POST['Tlegs'])}',
-			'{$connection->real_escape_string($_POST['colorLegs'])}')";
-        
-        $connection->query($sql);
+            $sql = "INSERT INTO tableoftables (id, nameOfSave, top, topColor, legs, legColor) VALUES (
+                '{$connection->real_escape_string($_SESSION['uid'])}',
+                '{$connection->real_escape_string($name)}',
+                '{$connection->real_escape_string($_POST['tabletop'])}',
+                '{$connection->real_escape_string($_POST['colorTableTop'])}',
+                '{$connection->real_escape_string($_POST['Tlegs'])}',
+                '{$connection->real_escape_string($_POST['colorLegs'])}')";
+            
+            $connection->query($sql);
 
-        $connection->close();
+            $connection->close();
 
-        header("Location: table.php");       
+            header("Location: table.php");
+        }else {
+            echo "<script>
+                    alert('You are not Logged in. Please Login to save designs');
+                </script>";
+        }       
     }
 }
 ?>

@@ -70,14 +70,6 @@
         <br>
         <br>
 
-        <!-- dropdown menu for the user's previously saved designs
-        <form method="POST" id="saveForm" style="padding-left:30px">
-            <select name="savedChair" class="savedMenu" id="saveDropdown" onclick="updateDropdown()">
-                <option>Previous saves</option>
-            </select>
-        </form> -->
-        <!--box where the changing image of the chair should be,
-            for now just a placeholder-->
         <div class="chairDesigning">
             <img id="chairM" src="B_PlasticChair.png" class ="image" style="height:390px;">
             <img id="chairL" src="B_ShortChairLegs.png" class="image" style="height:130px;">

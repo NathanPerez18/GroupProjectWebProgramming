@@ -23,7 +23,7 @@ class chair extends config{
             }
         }
         for($i = 0; $i< sizeof($this->saves); $i++){
-            setcookie("nameOfSave".$i,$this->saves[$i],time()+60*2);
+            setcookie("nameOfSave".$i,$this->saves[$i],time()+5);
         }
     }
 
@@ -52,22 +52,28 @@ class chair extends config{
 
 
     public function createSave(){
-        $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
-        $name = $_COOKIE['saveCookie'];
+        if(!empty($_SESSION["uid"])){
+            $connection = new mysqli($this->dbhost, $this->dbuser, $this->dbpass, $this->dbname);
+            $name = $_COOKIE['saveCookie'];
 
-        $sql = "INSERT INTO chair (id, nameOfSave, material, materialColor, legs, legColor) VALUES (
-			'{$connection->real_escape_string($_SESSION['uid'])}',
-			'{$connection->real_escape_string($name)}',
-            '{$connection->real_escape_string($_POST['material'])}',
-            '{$connection->real_escape_string($_POST['colorUpholstery'])}',
-            '{$connection->real_escape_string($_POST['legs'])}',
-			'{$connection->real_escape_string($_POST['colorLegs'])}')";
-        
-        $connection->query($sql);
+            $sql = "INSERT INTO chair (id, nameOfSave, material, materialColor, legs, legColor) VALUES (
+                '{$connection->real_escape_string($_SESSION['uid'])}',
+                '{$connection->real_escape_string($name)}',
+                '{$connection->real_escape_string($_POST['material'])}',
+                '{$connection->real_escape_string($_POST['colorUpholstery'])}',
+                '{$connection->real_escape_string($_POST['legs'])}',
+                '{$connection->real_escape_string($_POST['colorLegs'])}')";
+            
+            $connection->query($sql);
 
-        $connection->close();
+            $connection->close();
 
-        header("Location: chair.php");
+            header("Location: chair.php");
+        }else {
+            echo "<script>
+                    alert('You are not Logged in. Please Login to save designs');
+                </script>";
+        }
     }
 }
 ?>
